@@ -13,6 +13,7 @@
 			</publicationStmt>
 			<sourceDesc>
 				<p>Information about the source</p>
+			</sourceDesc>				
             <readingExpDesc>
 				<readingExp ref="#eured/test1">
 				<respStmt>
@@ -87,7 +88,6 @@
 				</notes>
 			</readingExp>
             </readingExpDesc>
-			</sourceDesc>
 		</fileDesc>
 	</teiHeader>
 	<text>
