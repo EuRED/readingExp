@@ -85,9 +85,9 @@
 					</textread>
 					<experienceType ref="#"/>
 					<!-- 9 combinaisons possibles  (@ref ou @type) -->
-					<notes>
-						<note/>
-					</notes>
+					<note>
+						<p/>
+					</note>
 				</readingExp>
 			</readingExpDesc>
 		</fileDesc>
