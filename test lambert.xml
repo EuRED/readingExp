@@ -42,18 +42,19 @@
 					</reader>
 					<listener>
 						<persName>
-							<forename/>
-							<surname/>
+							<forename />
+							<surname />
 						</persName>
-						<sex/>
-						<birth/>
-						<occupation/>
-						<!--  A lier avec Hisco et supprimer la balise socecStatus-->
-						<country/>
+						<sex />
+						<birth />
+						<occupation />
+						<!--  A lier avec Hisco et supprimer la balise socecStatus -->
+						<country />
 						<!-- A lier avec codes ISO -->
-						<education/>
-						<faith/>
-						<nationality/>
+						<education />
+						<faith />
+						<nationality />
+						<listenerStatus />
 					</listener>
 					<place>
 						<placeName/>
