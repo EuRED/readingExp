@@ -2,7 +2,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XSD/tei_lite_readingExp/tei_readingExp.xsd" >
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XSD/tei_all_readingExp/tei_all_readingExp.xsd" >
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
@@ -94,7 +94,7 @@
 		<body>
 			<p>22 avril. Jours d'été. Je ne tarderai guère à prendre mon premier bain, tire déjà des
             plans pour aller chaque midi aux Catalans. </p>
-			<p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de <author>Virginia Woolf</author>. <readingExp ref="#eured/test1">Je lis maintenant <title>Années</title>, qui me
+			<p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de <persName><forename>Virginia</forename> <surname>Woolf</surname></persName>. <readingExp ref="#eured/test1">Je lis maintenant <title>Années</title>, qui me
 		    rappelle, en plus léger, Les <title>Buddenbrooks</title>, et où certaines descriptions de la campagne
             m'<emotion type="#OCC/happy-for">émeuvent comme celles d'<title>Anna Karénine</title></emotion></readingExp>; mais <readingExp ref="#eured/test2">c'est aux <title>Vagues</title> que je continue à penser
             avec un <emotion type="#OCC/joy">attachement à demi nostalgique</emotion> (je les lisais à Berlin, au printemps)..</readingExp></p>
