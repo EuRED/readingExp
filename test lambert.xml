@@ -20,7 +20,7 @@
 						<resp>Edited by</resp>
 						<persName>
 							<forename>François</forename>
-							<surname/>
+							<surname>Vignale</surname>
 						</persName>
 					</respStmt>
 					<date when="1941-04-22"/>
@@ -38,6 +38,7 @@
 						<education/>
 						<faith/>
 						<nationality/>
+						<readerStatus ref="#professional">professional</readerStatus>
 					</reader>
 					<listener>
 						<persName>
