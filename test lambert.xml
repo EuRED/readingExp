@@ -23,7 +23,7 @@
 			<sourceDesc>
 				<p>Information about the source</p>
 			</sourceDesc>
-			<readingExpDesc>
+			<readingExp:readingExpDesc xmlns:readingExp="http://readingexp.univ-lemans.fr">
 				<readingExp ref="#eured/test1">
 					<respStmt>
 						<resp>Edited by</resp>
@@ -102,7 +102,8 @@
 						<p/>
 					</note>
 				</readingExp>
-			</readingExpDesc>
+			</readingExp:readingExpDesc>
+		<biblFull></biblFull>
 		</fileDesc>
 	</teiHeader>
 	<text>
