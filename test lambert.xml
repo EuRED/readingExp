@@ -17,12 +17,9 @@
 			<publicationStmt>
 				<publisher>Presses de l'Université de Provence</publisher>
 				<pubPlace>Marseille</pubPlace>
-				<availabilty status="free"></availabilty>
+				<availability status="free"><p>libre</p></availability>
 				<date when="2005"></date>
 			</publicationStmt>
-			<editionStmt>
-				
-			</editionStmt>
 			<sourceDesc>
 				<p>Information about the source</p>
 			</sourceDesc>
@@ -94,6 +91,7 @@
 						<provenance/>
 						<origLanguage>
 							<language ident=""/>
+						</origLanguage>
 						<!-- @type ISO 639/2 -->
 						<objectType ref="#"/>
 						<!-- Décrit la forme du document lu. Thésaurus à reprendre -->
