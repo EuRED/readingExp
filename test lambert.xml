@@ -6,11 +6,23 @@
 	<teiHeader>
 		<fileDesc>
 			<titleStmt>
-				<title>Jean Lambert : Journal (septembre 1940-septembre 1942)</title>
+				<title>Journal (septembre 1940-septembre 1942)</title>
+				<author>
+					<persName>
+						<forename>Jean</forename>
+						<surname>Lambert</surname>
+					</persName>
+				</author>
 			</titleStmt>
 			<publicationStmt>
-				<p>Publication Information</p>
+				<publisher>Presses de l'Université de Provence</publisher>
+				<pubPlace>Marseille</pubPlace>
+				<availabilty status="free"></availabilty>
+				<date when="2005"></date>
 			</publicationStmt>
+			<editionStmt>
+				
+			</editionStmt>
 			<sourceDesc>
 				<p>Information about the source</p>
 			</sourceDesc>
@@ -60,11 +72,15 @@
 						<placeName/>
 						<location>
 							<geo/>
-							<country/>
-							<settlement type=""/>
+							<country>France</country>
+							<settlement type="city">Marseille</settlement>
 							<district/>
 						</location>
 					</place>
+					<langUsage>
+						<language ident="fr-FR">Français</language>
+					</langUsage>
+						<!-- @type ISO 639/2  -->
 					<textread>
 						<author>
 							<persName>
@@ -76,10 +92,9 @@
 						<genre/>
 						<!-- Voir http://id.loc.gov/search/?q=memberOf:http://id.loc.gov/authorities/genreForms/collection_LCGFT_General -->
 						<provenance/>
-						<origLanguage/>
+						<origLanguage>
+							<language ident=""/>
 						<!-- @type ISO 639/2 -->
-						<readingLanguage/>
-						<!-- @type ISO 639/2  -->
 						<objectType ref="#"/>
 						<!-- Décrit la forme du document lu. Thésaurus à reprendre -->
 					</textread>
