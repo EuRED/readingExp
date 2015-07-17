@@ -9,12 +9,12 @@
 			<publicationStmt>
 				<publisher>TEI Consortium</publisher>
 				<availability status="free">
-					<p>TEI  material can be licensed differently depending on the use you intend to 
-						make of it. Hence it is made available under both the CC+BY and BSD-2 
-						licences.  The CC+BY licence is generally appropriate for usages which 
-						treat TEI content as data or documentation. The BSD-2 licence is 
-						generally appropriate for usage of TEI content in a software 
-						environment. For further information or clarification, please contact 
+					<p>TEI  material can be licensed differently depending on the use you intend to
+						make of it. Hence it is made available under both the CC+BY and BSD-2
+						licences.  The CC+BY licence is generally appropriate for usages which
+						treat TEI content as data or documentation. The BSD-2 licence is
+						generally appropriate for usage of TEI content in a software
+						environment. For further information or clarification, please contact
 						the TEI Consortium (info@tei-c.org).</p>
 				</availability>
 			</publicationStmt>
@@ -83,6 +83,79 @@
 						</rng:group>
 					</content>
 				</elementSpec>
+				<elementSpec ident="reader" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+				</elementSpec>
+				<elementSpec ident="readerStatus" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+				</elementSpec>
+				<elementSpec ident="listener" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+				</elementSpec>
+				<elementSpec ident="listenerStatus" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+				</elementSpec>
+				<elementSpec ident="textread" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+				</elementSpec>
+				<elementSpec ident="genre" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+				</elementSpec>
+				<elementSpec ident="origLanguage" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+				</elementSpec>
+				<elementSpec ident="experienceType" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+				</elementSpec>
+				<elementSpec ident="emotion" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+				</elementSpec>
+
 				<elementSpec ident="readingExpDesc" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
 					<classes>

@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2015-07-17T12:14:36Z. .TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
+DTD generated from ODD source 2015-07-17T12:45:21Z. .TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
 TEI Edition: Version 2.8.0. Last updated on
 	6th April 2015, revision 13197
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -2566,6 +2566,11 @@ prefix CDATA #IMPLIED >
 <!ATTLIST email xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST email
  %att.global.attributes; >
+<!--doc: -->
+<!ELEMENT emotion  EMPTY>
+<!ATTLIST emotion xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST emotion
+ %att.global.attributes; >
 <!--doc:(emphasized) marks words or phrases which are stressed or emphasized for linguistic or rhetorical effect. [3.3.2.2. Emphatic Words and Phrases 3.3.2. Emphasis, Foreign Words, and Unusual Language] -->
 <!ELEMENT emph %macro.paraContent;>
 <!ATTLIST emph xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2653,6 +2658,11 @@ where %data.pointer;  #IMPLIED >
 <!ATTLIST expan
  %att.global.attributes;
  %att.editLike.attributes; >
+<!--doc: -->
+<!ELEMENT experienceType  EMPTY>
+<!ATTLIST experienceType xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST experienceType
+ %att.global.attributes; >
 <!--doc:contains the explicit of a manuscript item, that is, the closing words of the text proper, exclusive of any rubric or colophon which might follow it. [10.6.1. The msItem and msItemStruct Elements] -->
 <!ELEMENT explicit %macro.phraseSeq;>
 <!ATTLIST explicit xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2892,6 +2902,11 @@ Elements] -->
  %att.global.attributes;
  %att.personal.attributes;
  %att.typed.attributes; >
+<!--doc: -->
+<!ELEMENT genre  EMPTY>
+<!ATTLIST genre xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST genre
+ %att.global.attributes; >
 <!--doc:(geographical coordinates) contains any expression of a set of geographic coordinates, representing a point, line, or area on the surface of the earth in some notation. [13.3.4.1. Varieties of Location] -->
 <!ELEMENT geo  (#PCDATA)>
 <!ATTLIST geo xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -3459,6 +3474,16 @@ type %data.enumerated;  #IMPLIED >
 <!ATTLIST listWit
  %att.global.attributes;
  %att.sortable.attributes; >
+<!--doc: -->
+<!ELEMENT listener  EMPTY>
+<!ATTLIST listener xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST listener
+ %att.global.attributes; >
+<!--doc: -->
+<!ELEMENT listenerStatus  EMPTY>
+<!ATTLIST listenerStatus xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST listenerStatus
+ %att.global.attributes; >
 <!--doc:(locally-defined property name) contains a locally defined name for some property. [5.2.1. Character Properties] -->
 <!ELEMENT localName  (#PCDATA)>
 <!ATTLIST localName xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -3895,6 +3920,11 @@ Normalization 12. Critical Apparatus] -->
  %att.datable.attributes;
  %att.editLike.attributes;
  %att.typed.attributes; >
+<!--doc: -->
+<!ELEMENT origLanguage  EMPTY>
+<!ATTLIST origLanguage xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST origLanguage
+ %att.global.attributes; >
 <!--doc:(origin place) contains any form of place name, used to identify the place of origin for a manuscript or manuscript part. [10.3.1. Origination] -->
 <!ELEMENT origPlace %macro.phraseSeq;>
 <!ATTLIST origPlace xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -4224,6 +4254,16 @@ marks (none|some|all) #IMPLIED >
  %att.global.attributes;
  %att.lexicographic.attributes;
  %att.typed.attributes; >
+<!--doc: -->
+<!ELEMENT reader  EMPTY>
+<!ATTLIST reader xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST reader
+ %att.global.attributes; >
+<!--doc: -->
+<!ELEMENT readerStatus  EMPTY>
+<!ATTLIST readerStatus xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST readerStatus
+ %att.global.attributes; >
 <!--doc: -->
 <!ELEMENT readingExp (respStmt*)>
 <!ATTLIST readingExp xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
@@ -5001,6 +5041,11 @@ otherLangs CDATA  #IMPLIED >
 <!ELEMENT textNode  EMPTY>
 <!ATTLIST textNode xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST textNode
+ %att.global.attributes; >
+<!--doc: -->
+<!ELEMENT textread  EMPTY>
+<!ATTLIST textread xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST textread
  %att.global.attributes; >
 <!--doc:separates the condition from the default in an if, or the antecedent and the consequent in a cond element. [18.11. Feature System Declaration] -->
 <!ELEMENT then EMPTY>
