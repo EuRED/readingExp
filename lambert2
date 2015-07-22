@@ -46,7 +46,7 @@
                <publicationStmt>
                   <!-- Dans <availability> faire apparaître toutes les informations relatives à la disponibilité du texte (censuré, partiellement censuré ...)  -->
                   <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
-                  <date when="2005"></date>
+                  <date when="2005">2005</date>
                </publicationStmt>
             </biblStruct>
             <!-- Dans tous les cas, dans le cas d'une correspondance, identifier le scripteur et le destinataire -->
