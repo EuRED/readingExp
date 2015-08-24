@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <!DOCTYPE TEI SYSTEM "customisation-tei/tei_readingExp.dtd">
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
@@ -111,10 +112,10 @@
 		<body>
 			<p>22 avril. Jours d'été. Je ne tarderai guère à prendre mon premier bain, tire déjà des
 				plans pour aller chaque midi aux Catalans. </p>
-			<p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de <persName><forename>Virginia</forename><surname>Woolf</surname></persName>. <readingExp ref="#eured/test1">Je lis maintenant <title>Années</title>, qui me
+			<p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de <persName><forename>Virginia</forename><surname>Woolf</surname></persName>. <intextReadingExp ref="#eured/test1">Je lis maintenant <title>Années</title>, qui me
 					rappelle, en plus léger, Les <title>Buddenbrooks</title>, et où certaines descriptions de la campagne
-					m'<emotion type="#OCC/happy-for">émeuvent comme celles d'<title>Anna Karénine</title></emotion></readingExp>; mais <readingExp ref="#eured/test2">c'est aux <title>Vagues</title> que je continue à penser
-					avec un <emotion type="#OCC/joy">attachement à demi nostalgique</emotion> (je les lisais à Berlin, au printemps)..</readingExp></p>
+					m'<emotion type="#OCC/happy-for">émeuvent comme celles d'<title>Anna Karénine</title></emotion></intextReadingExp>; mais <intextReadingExp ref="#eured/test2">c'est aux <title>Vagues</title> que je continue à penser
+					avec un <emotion type="#OCC/joy">attachement à demi nostalgique</emotion> (je les lisais à Berlin, au printemps)..</intextReadingExp></p>
 		</body>
 	</text>
 </TEI>
