@@ -241,6 +241,14 @@
 				</elementSpec>
 				<elementSpec ident="textread" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
+					<attList>
+						<attDef ident="ref" mode="add">
+							<desc>Reference</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+					</attList>
 					<classes>
 						<memberOf key="att.global"/>
 					</classes>
@@ -259,6 +267,9 @@
 								<rng:ref name="provenance"/>
 							</rng:zeroOrMore>
 							<rng:zeroOrMore>
+								<rng:ref name="langUsage"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
 								<rng:ref name="origLanguage"/>
 							</rng:zeroOrMore>
 							<rng:zeroOrMore>
@@ -266,14 +277,6 @@
 							</rng:zeroOrMore>
 						</rng:group>
 					</content>
-					<attList>
-						<attDef ident="ref" mode="add">
-							<desc>Reference</desc>
-							<datatype minOccurs="0" maxOccurs="1">
-								<rng:ref name="data.text"/>
-							</datatype>
-						</attDef>
-					</attList>
 				</elementSpec>
 				<elementSpec ident="genre" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
@@ -326,18 +329,18 @@
 						<memberOf key="att.global"/>
 					</classes>
 					<content>
-    <rng:zeroOrMore>
-      <rng:choice>
-        <rng:attribute>
-          <rng:anyName/>
-        </rng:attribute>
-        <rng:text/>
-        <rng:element>
-            <rng:anyName/>
-            <rng:ref name="emotion"/>
-        </rng:element>
-      </rng:choice>
-    </rng:zeroOrMore>					
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:attribute>
+									<rng:anyName/>
+								</rng:attribute>
+								<rng:text/>
+								<rng:element>
+									<rng:anyName/>
+									<rng:ref name="emotion"/>
+								</rng:element>
+							</rng:choice>
+						</rng:zeroOrMore>
 					</content>
 					<attList>
 						<attDef ident="ref" mode="add">
@@ -368,7 +371,7 @@
 						</rng:group>
 					</content>
 				</elementSpec>
-				<elementSpec ident="intextReadingExp" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+				<elementSpec ident="readingExpRef" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
 					<attList>
 						<attDef ident="ref" mode="add">
@@ -382,16 +385,7 @@
 						<memberOf key="model.pPart.data"/>
 						<memberOf key="att.global"/>
 					</classes>
-					<content>
-						<rng:zeroOrMore>
-							<rng:choice>
-								<rng:text/>
-								<rng:element>
-									<rng:anyName/>
-									</rng:element>
-							</rng:choice>
-						</rng:zeroOrMore>
-					</content>
+					<content><rng:ref name="macro.paraContent"/></content>
 				</elementSpec>
 			</schemaSpec>
 		</body>

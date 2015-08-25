@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2015-08-25T09:15:37Z. .TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
+DTD generated from ODD source 2015-08-25T11:58:28Z. .TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
 TEI Edition: Version 2.8.0. Last updated on
 	6th April 2015, revision 13197
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -1038,11 +1038,11 @@ to %data.word;  #IMPLIED'>
 <!ENTITY % model.addrPart_sequenceOptional "%model.nameLike;?, addrLine?, street?, postCode?, postBox?"> 
 <!ENTITY % model.addrPart_sequenceOptionalRepeatable "%model.nameLike;*, addrLine*, street*, postCode*, postBox*"> 
 <!ENTITY % model.addrPart_sequenceRepeatable "%model.nameLike;+, addrLine+, street+, postCode+, postBox+"> 
-<!ENTITY % model.pPart.data "%model.dateLike; |%model.measureLike; |%model.addressLike; |%model.nameLike; |intextReadingExp"> 
-<!ENTITY % model.pPart.data_sequence "%model.dateLike;, %model.measureLike;, %model.addressLike;, %model.nameLike;, intextReadingExp"> 
-<!ENTITY % model.pPart.data_sequenceOptional "%model.dateLike;?, %model.measureLike;?, %model.addressLike;?, %model.nameLike;?, intextReadingExp?"> 
-<!ENTITY % model.pPart.data_sequenceOptionalRepeatable "%model.dateLike;*, %model.measureLike;*, %model.addressLike;*, %model.nameLike;*, intextReadingExp*"> 
-<!ENTITY % model.pPart.data_sequenceRepeatable "%model.dateLike;+, %model.measureLike;+, %model.addressLike;+, %model.nameLike;+, intextReadingExp+"> 
+<!ENTITY % model.pPart.data "%model.dateLike; |%model.measureLike; |%model.addressLike; |%model.nameLike; |readingExpRef"> 
+<!ENTITY % model.pPart.data_sequence "%model.dateLike;, %model.measureLike;, %model.addressLike;, %model.nameLike;, readingExpRef"> 
+<!ENTITY % model.pPart.data_sequenceOptional "%model.dateLike;?, %model.measureLike;?, %model.addressLike;?, %model.nameLike;?, readingExpRef?"> 
+<!ENTITY % model.pPart.data_sequenceOptionalRepeatable "%model.dateLike;*, %model.measureLike;*, %model.addressLike;*, %model.nameLike;*, readingExpRef*"> 
+<!ENTITY % model.pPart.data_sequenceRepeatable "%model.dateLike;+, %model.measureLike;+, %model.addressLike;+, %model.nameLike;+, readingExpRef+"> 
 <!ENTITY % model.inter "%model.egLike; |%model.oddDecl; |%model.biblLike; |%model.labelLike; |%model.listLike; |%model.stageLike; |%model.qLike; |castList"> 
 <!ENTITY % model.inter_sequence "%model.egLike;, %model.oddDecl;, %model.biblLike;, %model.labelLike;, %model.listLike;, %model.stageLike;, %model.qLike;, castList"> 
 <!ENTITY % model.inter_sequenceOptional "%model.egLike;?, %model.oddDecl;?, %model.biblLike;?, %model.labelLike;?, %model.listLike;?, %model.stageLike;?, %model.qLike;?, castList?"> 
@@ -3191,12 +3191,6 @@ passive %data.enumerated;  #IMPLIED >
 <!ATTLIST interpretation
  %att.global.attributes;
  %att.declarable.attributes; >
-<!--doc: -->
-<!ELEMENT intextReadingExp (#PCDATA)*>
-<!ATTLIST intextReadingExp xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
-<!ATTLIST intextReadingExp
- %att.global.attributes;
-ref CDATA  #IMPLIED >
 <!--doc:contains one component of a list. [3.7. Lists 2.5. The Revision Description] -->
 <!ELEMENT item %macro.specialPara;>
 <!ATTLIST item xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -4287,6 +4281,12 @@ ref CDATA  #IMPLIED >
 <!ATTLIST readingExpDesc xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST readingExpDesc
  %att.global.attributes; >
+<!--doc: -->
+<!ELEMENT readingExpRef %macro.paraContent;>
+<!ATTLIST readingExpRef xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST readingExpRef
+ %att.global.attributes;
+ref CDATA  #IMPLIED >
 <!--doc:(recorded history) provides information about the source and revision status of the parent manuscript description itself. [10.9.1. Administrative Information] -->
 <!ELEMENT recordHist ((%model.pLike;)+|(source,change*))>
 <!ATTLIST recordHist xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -5056,7 +5056,7 @@ otherLangs CDATA  #IMPLIED >
 <!ATTLIST textNode
  %att.global.attributes; >
 <!--doc: -->
-<!ELEMENT textread (author*,title*,genre*,provenance*,origLanguage*,objectType*)>
+<!ELEMENT textread (author*,title*,genre*,provenance*,langUsage*,origLanguage*,objectType*)>
 <!ATTLIST textread xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST textread
  %att.global.attributes;

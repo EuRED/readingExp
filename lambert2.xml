@@ -6,7 +6,8 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt>
+         <titleStmt><zorg></zorg>
+ 
             <title>Journal (septembre 1940-septembre 1942)</title>
             <author>
                <persName>
@@ -14,7 +15,13 @@
                   <surname>Lambert</surname>
                </persName>
             </author>
-         </titleStmt>      
+         </titleStmt>
+               <publicationStmt>
+            <!-- Dans <availability> faire apparaître toutes les informations relatives à la disponibilité du texte (censuré, partiellement censuré ...)  -->
+            <publisher></publisher>
+                  <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
+                  <date when="2005">2005</date>
+               </publicationStmt>
          <sourceDesc>
             <!-- Dans le cas d'un témoignage provenant d'un manuscrit non publié. msItem non répété car les infos titre/auteur sont déjà prises en compte dans titleStmt -->
             <msDesc>
@@ -43,29 +50,26 @@
                  <biblScope></biblScope>
                </monogr>
                <!-- Dans le cas d'une publication en ligne -->
-               <publicationStmt>
-                  <!-- Dans <availability> faire apparaître toutes les informations relatives à la disponibilité du texte (censuré, partiellement censuré ...)  -->
-                  <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
-                  <date when="2005">2005</date>
-               </publicationStmt>
             </biblStruct>
             <!-- Dans tous les cas, dans le cas d'une correspondance, identifier le scripteur et le destinataire -->
-            <correspDesc>
-               <sender>
-                  <persName>
-                     <forename></forename>
-                     <surname></surname>
-                  </persName>
-               </sender>
-               <addressee>
-                  <persName>
-                     <forename></forename>
-                     <surname></surname>
-                  </persName>
-               </addressee>
-            </correspDesc>
          </sourceDesc>
       </fileDesc>
+      <profileDesc>
+         <correspDesc>
+               <correspAction type="sending">
+                  <persName>
+                     <forename></forename>
+                     <surname></surname>
+                  </persName>
+               </correspAction>
+               <correspAction type="receiving">
+                  <persName>
+                     <forename></forename>
+                     <surname></surname>
+                  </persName>
+               </correspAction>
+      </correspDesc>
+</profileDesc>
       <readingExpDesc>
          <readingExp ref="#eured/test1">
             <respStmt>
@@ -146,10 +150,9 @@
             </textread>
             <experienceType ref="#"/>
             <!-- 9 combinaisons possibles  (@ref ou @type) -->
-            <emotion type="#OCC/happy-for"></emotion>
             <note>
-               <p/>
             </note>
+            <emotion type="#OCC/happy-for"></emotion>
          </readingExp>
          <readingExp ref="#eured/test2">
             <emotion type="#OCC/joy"></emotion>
