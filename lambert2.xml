@@ -154,11 +154,12 @@
    </teiHeader>
    <text>
       <body>
-         <!-- Problème de pointeur vers <textread>. <title> devrait être remplacé à chaque fois par une balise <textread ref="#">. <textread> devrait donc être répété autant de fois que nécessaire --></body>
+         <!-- Problème de pointeur vers <textread>. <title> devrait être remplacé à chaque fois par une balise <textread ref="#">. <textread> devrait donc être répété autant de fois que nécessaire -->
          <p>22 avril. Jours d'été. Je ne tarderai guère à prendre mon premier bain, tire déjà des
             plans pour aller chaque midi aux Catalans. </p>
          <p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de <persName><forename>Virginia</forename><surname>Woolf</surname></persName>. <readingExp ref="#eured/test1">Je lis maintenant <title>Années</title>, qui me
             rappelle, en plus léger, Les <title>Buddenbrooks</title>, et où certaines descriptions de la campagne
             m'<emotion type="#OCC/happy-for">émeuvent comme celles d'<title>Anna Karénine</title></emotion></readingExp>; mais <readingExp ref="#eured/test2">c'est aux <title>Vagues</title> que je continue à penser
-               avec un <emotion type="#OCC/joy">attachement à demi nostalgique</emotion> (je les lisais à Berlin).
-</TEI>
+            avec un <emotion type="#OCC/joy">attachement à demi nostalgique</emotion> (je les lisais à Berlin).
+            </readingExp></p></body></text></TEI>
+
