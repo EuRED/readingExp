@@ -192,7 +192,44 @@
 						<memberOf key="att.global"/>
 					</classes>
 					<content>
+						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+							<rng:zeroOrMore>
+								<rng:ref name="persName"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="sex"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="birth"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="occupation"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="country"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="education"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="faith"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="nationality"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="listenerStatus"/>
+							</rng:zeroOrMore>
+						</rng:group>
 					</content>
+					<attList>
+						<attDef ident="ref" mode="add">
+							<desc>Reference</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+					</attList>
 				</elementSpec>
 				<elementSpec ident="listenerStatus" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
@@ -208,7 +245,35 @@
 						<memberOf key="att.global"/>
 					</classes>
 					<content>
+						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+							<rng:zeroOrMore>
+								<rng:ref name="author"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="title"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="genre"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="provenance"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="origLanguage"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="objectType"/>
+							</rng:zeroOrMore>
+						</rng:group>
 					</content>
+					<attList>
+						<attDef ident="ref" mode="add">
+							<desc>Reference</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+					</attList>
 				</elementSpec>
 				<elementSpec ident="genre" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
@@ -224,7 +289,20 @@
 						<memberOf key="att.global"/>
 					</classes>
 					<content>
+						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+							<rng:zeroOrMore>
+								<rng:ref name="language"/>
+							</rng:zeroOrMore>
+						</rng:group>
 					</content>
+					<attList>
+						<attDef ident="ref" mode="add">
+							<desc>Reference</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+					</attList>
 				</elementSpec>
 				<elementSpec ident="experienceType" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
@@ -233,6 +311,14 @@
 					</classes>
 					<content>
 					</content>
+					<attList>
+						<attDef ident="ref" mode="add">
+							<desc>Reference</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+					</attList>
 				</elementSpec>
 				<elementSpec ident="emotion" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
@@ -240,7 +326,33 @@
 						<memberOf key="att.global"/>
 					</classes>
 					<content>
+    <rng:zeroOrMore>
+      <rng:choice>
+        <rng:attribute>
+          <rng:anyName/>
+        </rng:attribute>
+        <rng:text/>
+        <rng:element>
+            <rng:anyName/>
+            <rng:ref name="emotion"/>
+        </rng:element>
+      </rng:choice>
+    </rng:zeroOrMore>					
 					</content>
+					<attList>
+						<attDef ident="ref" mode="add">
+							<desc>Reference</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+						<attDef ident="type" mode="add">
+							<desc>Type</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+					</attList>
 				</elementSpec>
 				<elementSpec ident="readingExpDesc" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
@@ -258,11 +370,27 @@
 				</elementSpec>
 				<elementSpec ident="intextReadingExp" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
+					<attList>
+						<attDef ident="ref" mode="add">
+							<desc>Reference</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+					</attList>
 					<classes>
-						<memberOf key="model.global"/>
+						<memberOf key="model.pPart.data"/>
 						<memberOf key="att.global"/>
 					</classes>
 					<content>
+						<rng:zeroOrMore>
+							<rng:choice>
+								<rng:text/>
+								<rng:element>
+									<rng:anyName/>
+									</rng:element>
+							</rng:choice>
+						</rng:zeroOrMore>
 					</content>
 				</elementSpec>
 			</schemaSpec>
