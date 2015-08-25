@@ -136,9 +136,9 @@
                <genre/>
                <!-- Voir http://id.loc.gov/search/?q=memberOf:http://id.loc.gov/authorities/genreForms/collection_LCGFT_General -->
                <provenance/>
-               <!-- Définit la langue dans laquelle le texte est lu. @value non retenu (trop complexe à mettre en œuvre). @type ISO 639/2  -->
                <langUsage>
                   <language ident="fr-FR">Français</language>
+                             <!-- Définit la langue dans laquelle le texte est lu. @value non retenu (trop complexe à mettre en œuvre). @type ISO 639/2  -->
                </langUsage>
                <!-- Nouvelle balise. Décrit la langue originale du texte lu. @type ISO 639/2. Nouvelle balise -->
                <origLanguage>
