@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2015-08-25T11:58:28Z. .TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
+DTD generated from ODD source 2015-10-01T21:53:35Z. .TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
 TEI Edition: Version 2.8.0. Last updated on
 	6th April 2015, revision 13197
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -763,11 +763,11 @@ to %data.word;  #IMPLIED'>
 <!ENTITY % model.specDescLike_sequenceOptional "specList?, specDesc?"> 
 <!ENTITY % model.specDescLike_sequenceOptionalRepeatable "specList*, specDesc*"> 
 <!ENTITY % model.specDescLike_sequenceRepeatable "specList+, specDesc+"> 
-<!ENTITY % model.biblLike "bibl |biblStruct |listBibl |biblFull |msDesc"> 
-<!ENTITY % model.biblLike_sequence "bibl, biblStruct, listBibl, biblFull, msDesc"> 
-<!ENTITY % model.biblLike_sequenceOptional "bibl?, biblStruct?, listBibl?, biblFull?, msDesc?"> 
-<!ENTITY % model.biblLike_sequenceOptionalRepeatable "bibl*, biblStruct*, listBibl*, biblFull*, msDesc*"> 
-<!ENTITY % model.biblLike_sequenceRepeatable "bibl+, biblStruct+, listBibl+, biblFull+, msDesc+"> 
+<!ENTITY % model.biblLike "bibl |biblStruct |listBibl |biblFull |msDesc |textread"> 
+<!ENTITY % model.biblLike_sequence "bibl, biblStruct, listBibl, biblFull, msDesc, textread"> 
+<!ENTITY % model.biblLike_sequenceOptional "bibl?, biblStruct?, listBibl?, biblFull?, msDesc?, textread?"> 
+<!ENTITY % model.biblLike_sequenceOptionalRepeatable "bibl*, biblStruct*, listBibl*, biblFull*, msDesc*, textread*"> 
+<!ENTITY % model.biblLike_sequenceRepeatable "bibl+, biblStruct+, listBibl+, biblFull+, msDesc+, textread+"> 
 <!ENTITY % model.headLike "head"> 
 <!ENTITY % model.headLike_sequence "head"> 
 <!ENTITY % model.headLike_sequenceOptional "head?"> 
@@ -843,11 +843,11 @@ to %data.word;  #IMPLIED'>
 <!ENTITY % model.persEventLike_sequenceOptional "birth?, death?, event?, listEvent?"> 
 <!ENTITY % model.persEventLike_sequenceOptionalRepeatable "birth*, death*, event*, listEvent*"> 
 <!ENTITY % model.persEventLike_sequenceRepeatable "birth+, death+, event+, listEvent+"> 
-<!ENTITY % model.personLike "org |person |personGrp"> 
-<!ENTITY % model.personLike_sequence "org, person, personGrp"> 
-<!ENTITY % model.personLike_sequenceOptional "org?, person?, personGrp?"> 
-<!ENTITY % model.personLike_sequenceOptionalRepeatable "org*, person*, personGrp*"> 
-<!ENTITY % model.personLike_sequenceRepeatable "org+, person+, personGrp+"> 
+<!ENTITY % model.personLike "org |person |personGrp |reader |listener |textread |sender |addressee"> 
+<!ENTITY % model.personLike_sequence "org, person, personGrp, reader, listener, textread, sender, addressee"> 
+<!ENTITY % model.personLike_sequenceOptional "org?, person?, personGrp?, reader?, listener?, textread?, sender?, addressee?"> 
+<!ENTITY % model.personLike_sequenceOptionalRepeatable "org*, person*, personGrp*, reader*, listener*, textread*, sender*, addressee*"> 
+<!ENTITY % model.personLike_sequenceRepeatable "org+, person+, personGrp+, reader+, listener+, textread+, sender+, addressee+"> 
 <!ENTITY % model.personPart "%model.biblLike; |%model.persStateLike; |%model.persEventLike; |idno"> 
 <!ENTITY % model.personPart_sequence "%model.biblLike;, %model.persStateLike;, %model.persEventLike;, idno"> 
 <!ENTITY % model.personPart_sequenceOptional "%model.biblLike;?, %model.persStateLike;?, %model.persEventLike;?, idno?"> 
@@ -1008,16 +1008,16 @@ to %data.word;  #IMPLIED'>
 <!ENTITY % model.addressLike_sequenceOptional "email?, address?, affiliation?"> 
 <!ENTITY % model.addressLike_sequenceOptionalRepeatable "email*, address*, affiliation*"> 
 <!ENTITY % model.addressLike_sequenceRepeatable "email+, address+, affiliation+"> 
-<!ENTITY % model.nameLike "%model.nameLike.agent; |%model.offsetLike; |%model.placeStateLike; |rs |lang |idno |%model.persNamePart;"> 
-<!ENTITY % model.nameLike_sequence "%model.nameLike.agent;, %model.offsetLike;, %model.placeStateLike;, rs, lang, idno, %model.persNamePart;"> 
-<!ENTITY % model.nameLike_sequenceOptional "%model.nameLike.agent;?, %model.offsetLike;?, %model.placeStateLike;?, rs?, lang?, idno?, %model.persNamePart;?"> 
-<!ENTITY % model.nameLike_sequenceOptionalRepeatable "%model.nameLike.agent;*, %model.offsetLike;*, %model.placeStateLike;*, rs*, lang*, idno*, %model.persNamePart;*"> 
-<!ENTITY % model.nameLike_sequenceRepeatable "%model.nameLike.agent;+, %model.offsetLike;+, %model.placeStateLike;+, rs+, lang+, idno+, %model.persNamePart;+"> 
-<!ENTITY % model.global "%model.global.meta; |%model.milestoneLike; |%model.noteLike; |%model.global.edit; |notatedMusic |figure |%model.global.spoken; |metamark"> 
-<!ENTITY % model.global_sequence "%model.global.meta;, %model.milestoneLike;, %model.noteLike;, %model.global.edit;, notatedMusic, figure, %model.global.spoken;, metamark"> 
-<!ENTITY % model.global_sequenceOptional "%model.global.meta;?, %model.milestoneLike;?, %model.noteLike;?, %model.global.edit;?, notatedMusic?, figure?, %model.global.spoken;?, metamark?"> 
-<!ENTITY % model.global_sequenceOptionalRepeatable "%model.global.meta;*, %model.milestoneLike;*, %model.noteLike;*, %model.global.edit;*, notatedMusic*, figure*, %model.global.spoken;*, metamark*"> 
-<!ENTITY % model.global_sequenceRepeatable "%model.global.meta;+, %model.milestoneLike;+, %model.noteLike;+, %model.global.edit;+, notatedMusic+, figure+, %model.global.spoken;+, metamark+"> 
+<!ENTITY % model.nameLike "%model.nameLike.agent; |%model.offsetLike; |%model.placeStateLike; |rs |lang |idno |%model.persNamePart; |reader |listener"> 
+<!ENTITY % model.nameLike_sequence "%model.nameLike.agent;, %model.offsetLike;, %model.placeStateLike;, rs, lang, idno, %model.persNamePart;, reader, listener"> 
+<!ENTITY % model.nameLike_sequenceOptional "%model.nameLike.agent;?, %model.offsetLike;?, %model.placeStateLike;?, rs?, lang?, idno?, %model.persNamePart;?, reader?, listener?"> 
+<!ENTITY % model.nameLike_sequenceOptionalRepeatable "%model.nameLike.agent;*, %model.offsetLike;*, %model.placeStateLike;*, rs*, lang*, idno*, %model.persNamePart;*, reader*, listener*"> 
+<!ENTITY % model.nameLike_sequenceRepeatable "%model.nameLike.agent;+, %model.offsetLike;+, %model.placeStateLike;+, rs+, lang+, idno+, %model.persNamePart;+, reader+, listener+"> 
+<!ENTITY % model.global "%model.global.meta; |%model.milestoneLike; |%model.noteLike; |%model.global.edit; |notatedMusic |figure |%model.global.spoken; |metamark |correspDesc"> 
+<!ENTITY % model.global_sequence "%model.global.meta;, %model.milestoneLike;, %model.noteLike;, %model.global.edit;, notatedMusic, figure, %model.global.spoken;, metamark, correspDesc"> 
+<!ENTITY % model.global_sequenceOptional "%model.global.meta;?, %model.milestoneLike;?, %model.noteLike;?, %model.global.edit;?, notatedMusic?, figure?, %model.global.spoken;?, metamark?, correspDesc?"> 
+<!ENTITY % model.global_sequenceOptionalRepeatable "%model.global.meta;*, %model.milestoneLike;*, %model.noteLike;*, %model.global.edit;*, notatedMusic*, figure*, %model.global.spoken;*, metamark*, correspDesc*"> 
+<!ENTITY % model.global_sequenceRepeatable "%model.global.meta;+, %model.milestoneLike;+, %model.noteLike;+, %model.global.edit;+, notatedMusic+, figure+, %model.global.spoken;+, metamark+, correspDesc+"> 
 <!ENTITY % model.featureVal "%model.featureVal.complex; |%model.featureVal.single;"> 
 <!ENTITY % model.featureVal_sequence "%model.featureVal.complex;, %model.featureVal.single;"> 
 <!ENTITY % model.featureVal_sequenceOptional "%model.featureVal.complex;?, %model.featureVal.single;?"> 
@@ -1133,11 +1133,11 @@ to %data.word;  #IMPLIED'>
 <!ENTITY % model.editorialDeclPart_sequenceOptional "correction?, normalization?, quotation?, hyphenation?, segmentation?, stdVals?, interpretation?, punctuation?"> 
 <!ENTITY % model.editorialDeclPart_sequenceOptionalRepeatable "correction*, normalization*, quotation*, hyphenation*, segmentation*, stdVals*, interpretation*, punctuation*"> 
 <!ENTITY % model.editorialDeclPart_sequenceRepeatable "correction+, normalization+, quotation+, hyphenation+, segmentation+, stdVals+, interpretation+, punctuation+"> 
-<!ENTITY % model.profileDescPart "textDesc |particDesc |settingDesc |abstract |creation |langUsage |textClass |calendarDesc |correspDesc |handNotes |listTranspose"> 
-<!ENTITY % model.profileDescPart_sequence "textDesc, particDesc, settingDesc, abstract, creation, langUsage, textClass, calendarDesc, correspDesc, handNotes, listTranspose"> 
-<!ENTITY % model.profileDescPart_sequenceOptional "textDesc?, particDesc?, settingDesc?, abstract?, creation?, langUsage?, textClass?, calendarDesc?, correspDesc?, handNotes?, listTranspose?"> 
-<!ENTITY % model.profileDescPart_sequenceOptionalRepeatable "textDesc*, particDesc*, settingDesc*, abstract*, creation*, langUsage*, textClass*, calendarDesc*, correspDesc*, handNotes*, listTranspose*"> 
-<!ENTITY % model.profileDescPart_sequenceRepeatable "textDesc+, particDesc+, settingDesc+, abstract+, creation+, langUsage+, textClass+, calendarDesc+, correspDesc+, handNotes+, listTranspose+"> 
+<!ENTITY % model.profileDescPart "textDesc |particDesc |settingDesc |abstract |creation |langUsage |textClass |calendarDesc |correspDesc |handNotes |listTranspose |origLanguage"> 
+<!ENTITY % model.profileDescPart_sequence "textDesc, particDesc, settingDesc, abstract, creation, langUsage, textClass, calendarDesc, correspDesc, handNotes, listTranspose, origLanguage"> 
+<!ENTITY % model.profileDescPart_sequenceOptional "textDesc?, particDesc?, settingDesc?, abstract?, creation?, langUsage?, textClass?, calendarDesc?, correspDesc?, handNotes?, listTranspose?, origLanguage?"> 
+<!ENTITY % model.profileDescPart_sequenceOptionalRepeatable "textDesc*, particDesc*, settingDesc*, abstract*, creation*, langUsage*, textClass*, calendarDesc*, correspDesc*, handNotes*, listTranspose*, origLanguage*"> 
+<!ENTITY % model.profileDescPart_sequenceRepeatable "textDesc+, particDesc+, settingDesc+, abstract+, creation+, langUsage+, textClass+, calendarDesc+, correspDesc+, handNotes+, listTranspose+, origLanguage+"> 
 <!ENTITY % model.correspActionPart "%model.dateLike; |%model.addressLike; |%model.nameLike; |note"> 
 <!ENTITY % model.correspActionPart_sequence "%model.dateLike;, %model.addressLike;, %model.nameLike;, note"> 
 <!ENTITY % model.correspActionPart_sequenceOptional "%model.dateLike;?, %model.addressLike;?, %model.nameLike;?, note?"> 
@@ -1604,6 +1604,9 @@ Licensing, etc. 3.11.2.4. Imprint, Size of a Document, and Reprint Information] 
 <!ATTLIST address xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST address
  %att.global.attributes; >
+<!--doc:Recipient of a correspondence -->
+<!ELEMENT addressee (persName*,sex*,birth*,occupation*,country*,education*,faith*,nationality*,readerStatus*)>
+<!ATTLIST addressee xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!--doc:(administrative information) contains information about the present custody and availability of the manuscript, and also about the record description itself. [10.9.1. Administrative Information] -->
 <!ELEMENT adminInfo (recordHist?,availability?,custodialHist?,(%model.noteLike;)?)>
 <!ATTLIST adminInfo xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2211,6 +2214,9 @@ type %data.enumerated;  #IMPLIED >
  %att.canonical.attributes;
  %att.global.attributes;
  %att.typed.attributes; >
+<!--doc:Description of a correspondence. Encapsulates information about the sender(s) and the recipient(s) -->
+<!ELEMENT correspDesc  EMPTY>
+<!ATTLIST correspDesc xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!--doc:contains the name of a geo-political unit, such as a nation, country, colony, or commonwealth, larger than or administratively superior to a region and smaller than a bloc. [13.2.3. Place Names] -->
 <!ELEMENT country %macro.phraseSeq;>
 <!ATTLIST country xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -2566,8 +2572,8 @@ prefix CDATA #IMPLIED >
 <!ATTLIST email xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST email
  %att.global.attributes; >
-<!--doc: -->
-<!ELEMENT emotion (#PCDATA)*>
+<!--doc:Contains information regarding the emotions generated by the reading experience. -->
+<!ELEMENT emotion  EMPTY>
 <!ATTLIST emotion xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST emotion
  %att.global.attributes;
@@ -2660,7 +2666,7 @@ where %data.pointer;  #IMPLIED >
 <!ATTLIST expan
  %att.global.attributes;
  %att.editLike.attributes; >
-<!--doc: -->
+<!--doc:Contains information about the type of reading experience -->
 <!ELEMENT experienceType  EMPTY>
 <!ATTLIST experienceType xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST experienceType
@@ -2905,7 +2911,7 @@ Elements] -->
  %att.global.attributes;
  %att.personal.attributes;
  %att.typed.attributes; >
-<!--doc: -->
+<!--doc:Contains information about the literary genre of the text read during the reading experience -->
 <!ELEMENT genre  EMPTY>
 <!ATTLIST genre xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST genre
@@ -3477,13 +3483,36 @@ type %data.enumerated;  #IMPLIED >
 <!ATTLIST listWit
  %att.global.attributes;
  %att.sortable.attributes; >
-<!--doc: -->
+<!--doc:Contains all the information on the listener. -->
 <!ELEMENT listener (persName*,sex*,birth*,occupation*,country*,education*,faith*,nationality*,listenerStatus*)>
 <!ATTLIST listener xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST listener
+ %att.canonical.attribute.key;
+ %att.datable.attributes;
+ %att.datable.custom.attributes;
+ %att.datable.iso.attributes;
+ %att.datable.w3c.attributes;
+ %att.dimensions.attributes;
+ %att.editLike.attributes;
  %att.global.attributes;
+ %att.global.analytic.attributes;
+ %att.global.change.attributes;
+ %att.global.facs.attributes;
+ %att.global.linking.attributes;
+ %att.global.rendition.attributes;
+ %att.global.responsibility.attributes;
+ %att.personal.attribute.full;
+ %att.personal.attribute.sort;
+ %att.naming.attribute.role;
+ %att.naming.attribute.nymRef;
+ %att.canonical.attribute.key;
+ %att.ranging.attributes;
+ %att.source.attributes;
+ %att.typed.attributes;
+ref CDATA  #IMPLIED
+ref CDATA  #IMPLIED
 ref CDATA  #IMPLIED >
-<!--doc: -->
+<!--doc:Contains information on the degree of professionalism of the listener in his reading activities. -->
 <!ELEMENT listenerStatus  EMPTY>
 <!ATTLIST listenerStatus xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST listenerStatus
@@ -3924,7 +3953,7 @@ Normalization 12. Critical Apparatus] -->
  %att.datable.attributes;
  %att.editLike.attributes;
  %att.typed.attributes; >
-<!--doc: -->
+<!--doc:Contains information on the original language of the text read during the reading experience.  -->
 <!ELEMENT origLanguage (language*)>
 <!ATTLIST origLanguage xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST origLanguage
@@ -4259,18 +4288,42 @@ marks (none|some|all) #IMPLIED >
  %att.global.attributes;
  %att.lexicographic.attributes;
  %att.typed.attributes; >
-<!--doc: -->
+<!--doc:Contains all the information on the listener. -->
 <!ELEMENT reader (persName*,sex*,birth*,occupation*,country*,education*,faith*,nationality*,readerStatus*)>
 <!ATTLIST reader xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST reader
- %att.global.attributes; >
-<!--doc: -->
-<!ELEMENT readerStatus (#PCDATA)*>
+ %att.canonical.attributes;
+ %att.datable.attributes;
+ %att.datable.custom.attributes;
+ %att.datable.iso.attributes;
+ %att.datable.w3c.attributes;
+ %att.dimensions.attributes;
+ %att.editLike.attributes;
+ %att.global.attributes;
+ %att.global.analytic.attributes;
+ %att.global.change.attributes;
+ %att.global.facs.attributes;
+ %att.global.linking.attributes;
+ %att.global.rendition.attributes;
+ %att.global.responsibility.attributes;
+ %att.naming.attributes;
+ %att.personal.attributes;
+ %att.ranging.attributes;
+ %att.source.attributes;
+ %att.typed.attributes; >
+<!--doc:Contains information on the degree of professionalism of the reader in his reading activities. -->
+<!ELEMENT readerStatus  EMPTY>
 <!ATTLIST readerStatus xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST readerStatus
  %att.global.attributes;
+ %att.global.analytic.attributes;
+ %att.global.change.attributes;
+ %att.global.facs.attributes;
+ %att.global.linking.attributes;
+ %att.global.rendition.attributes;
+ %att.global.responsibility.attributes;
 ref CDATA  #IMPLIED >
-<!--doc: -->
+<!--doc:Contains all the description of the reading experience elements. -->
 <!ELEMENT readingExp (respStmt*,date*,reader*,listener*,place*,langUsage*,textread*,experienceType*,note*,title*,emotion*)>
 <!ATTLIST readingExp xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST readingExp
@@ -4583,6 +4636,9 @@ contemporary %data.xTruthValue;  #IMPLIED >
 <!ATTLIST segmentation
  %att.global.attributes;
  %att.declarable.attributes; >
+<!--doc:sender, writer -->
+<!ELEMENT sender (persName*,sex*,birth*,occupation*,country*,education*,faith*,nationality*,readerStatus*)>
+<!ATTLIST sender xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!--doc:groups together all information relating to one word sense in a dictionary entry, for example definitions, examples, and translation equivalents. [9.2. The Structure of Dictionary Entries] -->
 <!ELEMENT sense (#PCDATA|%model.gLike;|sense|%model.entryPart.top;|%model.phrase;|%model.global;)*>
 <!ATTLIST sense xmlns CDATA "http://www.tei-c.org/ns/1.0">
@@ -5055,11 +5111,39 @@ otherLangs CDATA  #IMPLIED >
 <!ATTLIST textNode xmlns CDATA "http://www.tei-c.org/ns/1.0">
 <!ATTLIST textNode
  %att.global.attributes; >
-<!--doc: -->
+<!--doc:Contains information about the text read during the reading experience -->
+<!ELEMENT textProvenance  EMPTY>
+<!ATTLIST textProvenance xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!--doc:Contains information on the text read during the reading experience. -->
 <!ELEMENT textread (author*,title*,genre*,provenance*,langUsage*,origLanguage*,objectType*)>
 <!ATTLIST textread xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST textread
+ %att.canonical.attribute.key;
+ %att.datable.attributes;
+ %att.datable.custom.attributes;
+ %att.dimensions.attributes;
+ %att.editLike.attributes;
  %att.global.attributes;
+ %att.global.analytic.attributes;
+ %att.global.change.attributes;
+ %att.global.facs.attributes;
+ %att.global.linking.attributes;
+ %att.global.rendition.attributes;
+ %att.global.responsibility.attributes;
+ %att.naming.attribute.role;
+ %att.naming.attribute.nymRef;
+ %att.canonical.attribute.key;
+ %att.personal.attribute.full;
+ %att.personal.attribute.sort;
+ %att.naming.attribute.role;
+ %att.naming.attribute.nymRef;
+ %att.canonical.attribute.key;
+ %att.ranging.attributes;
+ %att.source.attributes;
+ %att.typed.attributes;
+ref CDATA  #IMPLIED
+ref CDATA  #IMPLIED
+ref CDATA  #IMPLIED
 ref CDATA  #IMPLIED >
 <!--doc:separates the condition from the default in an if, or the antecedent and the consequent in a cond element. [18.11. Feature System Declaration] -->
 <!ELEMENT then EMPTY>

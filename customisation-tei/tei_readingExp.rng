@@ -3,7 +3,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2015-07-17T12:14:20Z. .
+Schema generated from ODD source 2015-10-01T21:54:46Z. .
 TEI Edition: Version 2.8.0. Last updated on
 	6th April 2015, revision 13197
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -2592,6 +2592,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="listBibl"/>
          <ref name="biblFull"/>
          <ref name="msDesc"/>
+         <ref name="textread"/>
       </choice>
    </define>
    <define name="model.biblLike_alternation">
@@ -2601,6 +2602,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="listBibl"/>
          <ref name="biblFull"/>
          <ref name="msDesc"/>
+         <ref name="textread"/>
       </choice>
    </define>
    <define name="model.biblLike_sequence">
@@ -2609,6 +2611,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="listBibl"/>
       <ref name="biblFull"/>
       <ref name="msDesc"/>
+      <ref name="textread"/>
    </define>
    <define name="model.biblLike_sequenceOptional">
       <optional>
@@ -2625,6 +2628,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="msDesc"/>
+      </optional>
+      <optional>
+         <ref name="textread"/>
       </optional>
    </define>
    <define name="model.biblLike_sequenceOptionalRepeatable">
@@ -2643,6 +2649,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <zeroOrMore>
          <ref name="msDesc"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="textread"/>
+      </zeroOrMore>
    </define>
    <define name="model.biblLike_sequenceRepeatable">
       <oneOrMore>
@@ -2659,6 +2668,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="msDesc"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="textread"/>
       </oneOrMore>
    </define>
    <define name="model.headLike">
@@ -3137,6 +3149,11 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="org"/>
          <ref name="person"/>
          <ref name="personGrp"/>
+         <ref name="reader"/>
+         <ref name="listener"/>
+         <ref name="textread"/>
+         <ref name="sender"/>
+         <ref name="addressee"/>
       </choice>
    </define>
    <define name="model.personPart">
@@ -3758,6 +3775,8 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="lang"/>
          <ref name="idno"/>
          <ref name="model.persNamePart"/>
+         <ref name="reader"/>
+         <ref name="listener"/>
       </choice>
    </define>
    <define name="model.nameLike_alternation">
@@ -3769,6 +3788,8 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="lang"/>
          <ref name="idno"/>
          <ref name="model.persNamePart_alternation"/>
+         <ref name="reader"/>
+         <ref name="listener"/>
       </choice>
    </define>
    <define name="model.nameLike_sequence">
@@ -3779,6 +3800,8 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="lang"/>
       <ref name="idno"/>
       <ref name="model.persNamePart_sequence"/>
+      <ref name="reader"/>
+      <ref name="listener"/>
    </define>
    <define name="model.nameLike_sequenceOptional">
       <optional>
@@ -3801,6 +3824,12 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="model.persNamePart_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="reader"/>
+      </optional>
+      <optional>
+         <ref name="listener"/>
       </optional>
    </define>
    <define name="model.nameLike_sequenceOptionalRepeatable">
@@ -3825,6 +3854,12 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <zeroOrMore>
          <ref name="model.persNamePart_sequenceOptionalRepeatable"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="reader"/>
+      </zeroOrMore>
+      <zeroOrMore>
+         <ref name="listener"/>
+      </zeroOrMore>
    </define>
    <define name="model.nameLike_sequenceRepeatable">
       <oneOrMore>
@@ -3848,6 +3883,12 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <oneOrMore>
          <ref name="model.persNamePart_sequenceRepeatable"/>
       </oneOrMore>
+      <oneOrMore>
+         <ref name="reader"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="listener"/>
+      </oneOrMore>
    </define>
    <define name="model.global">
       <choice>
@@ -3859,6 +3900,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="figure"/>
          <ref name="model.global.spoken"/>
          <ref name="metamark"/>
+         <ref name="correspDesc"/>
       </choice>
    </define>
    <define name="model.featureVal">
@@ -3905,6 +3947,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="model.measureLike"/>
          <ref name="model.addressLike"/>
          <ref name="model.nameLike"/>
+         <ref name="readingExpRef"/>
       </choice>
    </define>
    <define name="model.inter">
@@ -4059,6 +4102,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="correspDesc"/>
          <ref name="handNotes"/>
          <ref name="listTranspose"/>
+         <ref name="origLanguage"/>
       </choice>
    </define>
    <define name="model.correspActionPart">
@@ -9153,25 +9197,6 @@ Suggested values include: 1] WGS84(World Geodetic System) ; 2] MGRS(Military Gri
          </oneOrMore>
          <ref name="att.global.attributes"/>
          <ref name="att.pointing.attributes"/>
-         <empty/>
-      </element>
-   </define>
-   <define name="correspDesc">
-      <element name="correspDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(correspondence
-    description) contains a description of the actions related to one act of correspondence [2.4.6. Correspondence Description]</a:documentation>
-         <choice>
-            <oneOrMore>
-               <ref name="model.correspDescPart"/>
-            </oneOrMore>
-            <oneOrMore>
-               <ref name="model.pLike"/>
-            </oneOrMore>
-         </choice>
-         <ref name="att.declarable.attributes"/>
-         <ref name="att.canonical.attributes"/>
-         <ref name="att.global.attributes"/>
-         <ref name="att.typed.attributes"/>
          <empty/>
       </element>
    </define>
@@ -17133,13 +17158,342 @@ Child elements of <name/> are only allowed when an external module is being load
    </define>
    <define name="readingExp">
       <element name="readingExp" ns="http://readingexp.univ-lemans.fr/tei">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains all the description of the reading experience elements.</a:documentation>
          <group>
             <zeroOrMore>
                <ref name="respStmt"/>
             </zeroOrMore>
+            <zeroOrMore>
+               <ref name="date"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="reader"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="listener"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="place"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="langUsage"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="textread"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="experienceType"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="note"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="title"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="emotion"/>
+            </zeroOrMore>
          </group>
          <ref name="att.global.attributes"/>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="reader">
+      <element name="reader" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains all the information on the listener.</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="persName"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="sex"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="birth"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="occupation"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="country"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="education"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="faith"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="nationality"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="readerStatus"/>
+            </zeroOrMore>
+         </group>
+         <ref name="att.canonical.attributes"/>
+         <ref name="att.datable.attributes"/>
+         <ref name="att.datable.custom.attributes"/>
+         <ref name="att.datable.iso.attributes"/>
+         <ref name="att.datable.w3c.attributes"/>
+         <ref name="att.dimensions.attributes"/>
+         <ref name="att.editLike.attributes"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.global.analytic.attributes"/>
+         <ref name="att.global.change.attributes"/>
+         <ref name="att.global.facs.attributes"/>
+         <ref name="att.global.linking.attributes"/>
+         <ref name="att.global.rendition.attributes"/>
+         <ref name="att.global.responsibility.attributes"/>
+         <ref name="att.naming.attributes"/>
+         <ref name="att.personal.attributes"/>
+         <ref name="att.ranging.attributes"/>
+         <ref name="att.source.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="readerStatus">
+      <element name="readerStatus" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains information on the degree of professionalism of the reader in his reading activities.</a:documentation>
+         <empty/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.global.analytic.attributes"/>
+         <ref name="att.global.change.attributes"/>
+         <ref name="att.global.facs.attributes"/>
+         <ref name="att.global.linking.attributes"/>
+         <ref name="att.global.rendition.attributes"/>
+         <ref name="att.global.responsibility.attributes"/>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="listener">
+      <element name="listener" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains all the information on the listener.</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="persName"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="sex"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="birth"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="occupation"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="country"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="education"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="faith"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="nationality"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="listenerStatus"/>
+            </zeroOrMore>
+         </group>
+         <ref name="att.canonical.attribute.key"/>
+         <ref name="att.datable.attributes"/>
+         <ref name="att.datable.custom.attributes"/>
+         <ref name="att.datable.iso.attributes"/>
+         <ref name="att.datable.w3c.attributes"/>
+         <ref name="att.dimensions.attributes"/>
+         <ref name="att.editLike.attributes"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.global.analytic.attributes"/>
+         <ref name="att.global.change.attributes"/>
+         <ref name="att.global.facs.attributes"/>
+         <ref name="att.global.linking.attributes"/>
+         <ref name="att.global.rendition.attributes"/>
+         <ref name="att.global.responsibility.attributes"/>
+         <ref name="att.personal.attribute.full"/>
+         <ref name="att.personal.attribute.sort"/>
+         <ref name="att.naming.attribute.role"/>
+         <ref name="att.naming.attribute.nymRef"/>
+         <ref name="att.canonical.attribute.key"/>
+         <ref name="att.ranging.attributes"/>
+         <ref name="att.source.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="listenerStatus">
+      <element name="listenerStatus" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains information on the degree of professionalism of the listener in his reading activities.</a:documentation>
+         <empty/>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="textread">
+      <element name="textread" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains information on the text read during the reading experience.</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="author"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="title"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="genre"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="provenance"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="langUsage"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="origLanguage"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="objectType"/>
+            </zeroOrMore>
+         </group>
+         <ref name="att.canonical.attribute.key"/>
+         <ref name="att.datable.attributes"/>
+         <ref name="att.datable.custom.attributes"/>
+         <ref name="att.dimensions.attributes"/>
+         <ref name="att.editLike.attributes"/>
+         <ref name="att.global.attributes"/>
+         <ref name="att.global.analytic.attributes"/>
+         <ref name="att.global.change.attributes"/>
+         <ref name="att.global.facs.attributes"/>
+         <ref name="att.global.linking.attributes"/>
+         <ref name="att.global.rendition.attributes"/>
+         <ref name="att.global.responsibility.attributes"/>
+         <ref name="att.naming.attribute.role"/>
+         <ref name="att.naming.attribute.nymRef"/>
+         <ref name="att.canonical.attribute.key"/>
+         <ref name="att.personal.attribute.full"/>
+         <ref name="att.personal.attribute.sort"/>
+         <ref name="att.naming.attribute.role"/>
+         <ref name="att.naming.attribute.nymRef"/>
+         <ref name="att.canonical.attribute.key"/>
+         <ref name="att.ranging.attributes"/>
+         <ref name="att.source.attributes"/>
+         <ref name="att.typed.attributes"/>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="genre">
+      <element name="genre" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains information about the literary genre of the text read during the reading experience</a:documentation>
+         <empty/>
+         <ref name="att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="origLanguage">
+      <element name="origLanguage" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains information on the original language of the text read during the reading experience. </a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="language"/>
+            </zeroOrMore>
+         </group>
+         <ref name="att.global.attributes"/>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="experienceType">
+      <element name="experienceType" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains information about the type of reading experience</a:documentation>
+         <empty/>
+         <ref name="att.global.attributes"/>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="emotion">
+      <element name="emotion" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Contains information regarding the emotions generated by the reading experience.</a:documentation>
+         <empty/>
+         <ref name="att.global.attributes"/>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Type</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -17153,6 +17507,88 @@ Child elements of <name/> are only allowed when an external module is being load
          </group>
          <ref name="att.global.attributes"/>
          <empty/>
+      </element>
+   </define>
+   <define name="readingExpRef">
+      <element name="readingExpRef" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+         <ref name="macro.paraContent"/>
+         <ref name="att.global.attributes"/>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Reference</a:documentation>
+               <ref name="data.text"/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="sender">
+      <element name="sender" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">sender, writer</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="persName"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="sex"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="birth"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="occupation"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="country"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="education"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="faith"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="nationality"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="readerStatus"/>
+            </zeroOrMore>
+         </group>
+      </element>
+   </define>
+   <define name="addressee">
+      <element name="addressee" ns="http://readingexp.univ-lemans.fr/tei">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Recipient of a correspondence</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="persName"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="sex"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="birth"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="occupation"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="country"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="education"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="faith"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="nationality"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="readerStatus"/>
+            </zeroOrMore>
+         </group>
       </element>
    </define>
    <start>

@@ -8,7 +8,7 @@ namespace s = "http://www.ascc.net/xml/schematron"
 namespace sch = "http://purl.oclc.org/dsdl/schematron"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2015-07-17T12:13:50Z. .
+# Schema generated from ODD source 2015-10-01T21:54:24Z. .
 # TEI Edition: Version 2.8.0. Last updated on
 #	6th April 2015, revision 13197
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -1380,16 +1380,18 @@ model.oddDecl_sequenceRepeatable =
 model.oddRef = classRef | elementRef | macroRef | moduleRef
 model.phrase.xml = att | gi | tag | val
 model.specDescLike = specList | specDesc
-model.biblLike = bibl | biblStruct | listBibl | biblFull | msDesc
+model.biblLike =
+  bibl | biblStruct | listBibl | biblFull | msDesc | textread
 model.biblLike_alternation =
-  bibl | biblStruct | listBibl | biblFull | msDesc
-model.biblLike_sequence = bibl, biblStruct, listBibl, biblFull, msDesc
+  bibl | biblStruct | listBibl | biblFull | msDesc | textread
+model.biblLike_sequence =
+  bibl, biblStruct, listBibl, biblFull, msDesc, textread
 model.biblLike_sequenceOptional =
-  bibl?, biblStruct?, listBibl?, biblFull?, msDesc?
+  bibl?, biblStruct?, listBibl?, biblFull?, msDesc?, textread?
 model.biblLike_sequenceOptionalRepeatable =
-  bibl*, biblStruct*, listBibl*, biblFull*, msDesc*
+  bibl*, biblStruct*, listBibl*, biblFull*, msDesc*, textread*
 model.biblLike_sequenceRepeatable =
-  bibl+, biblStruct+, listBibl+, biblFull+, msDesc+
+  bibl+, biblStruct+, listBibl+, biblFull+, msDesc+, textread+
 model.headLike = head
 model.headLike_alternation = head
 model.headLike_sequence = head
@@ -1540,7 +1542,15 @@ model.persStateLike =
   | state
   | trait
 model.persEventLike = birth | death | event | listEvent
-model.personLike = org | person | personGrp
+model.personLike =
+  org
+  | person
+  | personGrp
+  | reader
+  | listener
+  | textread
+  | sender
+  | addressee
 model.personPart =
   model.biblLike | model.persStateLike | model.persEventLike | idno
 model.placeNamePart =
@@ -1740,6 +1750,8 @@ model.nameLike =
   | lang
   | idno
   | model.persNamePart
+  | reader
+  | listener
 model.nameLike_alternation =
   model.nameLike.agent_alternation
   | model.offsetLike_alternation
@@ -1748,6 +1760,8 @@ model.nameLike_alternation =
   | lang
   | idno
   | model.persNamePart_alternation
+  | reader
+  | listener
 model.nameLike_sequence =
   model.nameLike.agent_sequence,
   model.offsetLike_sequence,
@@ -1755,7 +1769,9 @@ model.nameLike_sequence =
   rs,
   lang,
   idno,
-  model.persNamePart_sequence
+  model.persNamePart_sequence,
+  reader,
+  listener
 model.nameLike_sequenceOptional =
   model.nameLike.agent_sequenceOptional?,
   model.offsetLike_sequenceOptional?,
@@ -1763,7 +1779,9 @@ model.nameLike_sequenceOptional =
   rs?,
   lang?,
   idno?,
-  model.persNamePart_sequenceOptional?
+  model.persNamePart_sequenceOptional?,
+  reader?,
+  listener?
 model.nameLike_sequenceOptionalRepeatable =
   model.nameLike.agent_sequenceOptionalRepeatable*,
   model.offsetLike_sequenceOptionalRepeatable*,
@@ -1771,7 +1789,9 @@ model.nameLike_sequenceOptionalRepeatable =
   rs*,
   lang*,
   idno*,
-  model.persNamePart_sequenceOptionalRepeatable*
+  model.persNamePart_sequenceOptionalRepeatable*,
+  reader*,
+  listener*
 model.nameLike_sequenceRepeatable =
   model.nameLike.agent_sequenceRepeatable+,
   model.offsetLike_sequenceRepeatable+,
@@ -1779,7 +1799,9 @@ model.nameLike_sequenceRepeatable =
   rs+,
   lang+,
   idno+,
-  model.persNamePart_sequenceRepeatable+
+  model.persNamePart_sequenceRepeatable+,
+  reader+,
+  listener+
 model.global =
   model.global.meta
   | model.milestoneLike
@@ -1789,6 +1811,7 @@ model.global =
   | figure
   | model.global.spoken
   | metamark
+  | correspDesc
 model.featureVal = model.featureVal.complex | model.featureVal.single
 model.biblPart =
   model.respLike
@@ -1810,6 +1833,7 @@ model.pPart.data =
   | model.measureLike
   | model.addressLike
   | model.nameLike
+  | readingExpRef
 model.inter =
   model.egLike
   | model.oddDecl
@@ -1889,6 +1913,7 @@ model.profileDescPart =
   | correspDesc
   | handNotes
   | listTranspose
+  | origLanguage
 model.correspActionPart =
   model.dateLike | model.addressLike | model.nameLike | note
 model.correspContextPart = model.ptrLike | model.pLike | note
@@ -5543,18 +5568,6 @@ calendar =
   ## describes a calendar or dating system used in a dating formula in the text. [2.4.5. Calendar Description]
   element ns2:calendar {
     model.pLike+, att.global.attributes, att.pointing.attributes, empty
-  }
-correspDesc =
-  
-  ## (correspondence
-  ##     description) contains a description of the actions related to one act of correspondence [2.4.6. Correspondence Description]
-  element ns2:correspDesc {
-    (model.correspDescPart+ | model.pLike+),
-    att.declarable.attributes,
-    att.canonical.attributes,
-    att.global.attributes,
-    att.typed.attributes,
-    empty
   }
 correspAction =
   
@@ -10760,10 +10773,255 @@ textNode =
   element ns2:textNode { att.global.attributes, empty }
 readingExp =
   
-  ##
-  element readingExp { respStmt*, att.global.attributes, empty }
+  ## Contains all the description of the reading experience elements.
+  element readingExp {
+    (respStmt*,
+     date*,
+     reader*,
+     listener*,
+     place*,
+     langUsage*,
+     textread*,
+     experienceType*,
+     note*,
+     title*,
+     emotion*),
+    att.global.attributes,
+    
+    ## Reference
+    attribute ref { data.text }?,
+    empty
+  }
+reader =
+  
+  ## Contains all the information on the listener.
+  element reader {
+    (persName*,
+     sex*,
+     birth*,
+     occupation*,
+     country*,
+     education*,
+     faith*,
+     nationality*,
+     readerStatus*),
+    att.canonical.attributes,
+    att.datable.attributes,
+    att.datable.custom.attributes,
+    att.datable.iso.attributes,
+    att.datable.w3c.attributes,
+    att.dimensions.attributes,
+    att.editLike.attributes,
+    att.global.attributes,
+    att.global.analytic.attributes,
+    att.global.change.attributes,
+    att.global.facs.attributes,
+    att.global.linking.attributes,
+    att.global.rendition.attributes,
+    att.global.responsibility.attributes,
+    att.naming.attributes,
+    att.personal.attributes,
+    att.ranging.attributes,
+    att.source.attributes,
+    att.typed.attributes,
+    empty
+  }
+readerStatus =
+  
+  ## Contains information on the degree of professionalism of the reader in his reading activities.
+  element readerStatus {
+    empty,
+    att.global.attributes,
+    att.global.analytic.attributes,
+    att.global.change.attributes,
+    att.global.facs.attributes,
+    att.global.linking.attributes,
+    att.global.rendition.attributes,
+    att.global.responsibility.attributes,
+    
+    ## Reference
+    attribute ref { data.text }?,
+    empty
+  }
+listener =
+  
+  ## Contains all the information on the listener.
+  element listener {
+    (persName*,
+     sex*,
+     birth*,
+     occupation*,
+     country*,
+     education*,
+     faith*,
+     nationality*,
+     listenerStatus*),
+    att.canonical.attribute.key,
+    att.datable.attributes,
+    att.datable.custom.attributes,
+    att.datable.iso.attributes,
+    att.datable.w3c.attributes,
+    att.dimensions.attributes,
+    att.editLike.attributes,
+    att.global.attributes,
+    att.global.analytic.attributes,
+    att.global.change.attributes,
+    att.global.facs.attributes,
+    att.global.linking.attributes,
+    att.global.rendition.attributes,
+    att.global.responsibility.attributes,
+    att.personal.attribute.full,
+    att.personal.attribute.sort,
+    att.naming.attribute.role,
+    att.naming.attribute.nymRef,
+    att.canonical.attribute.key,
+    att.ranging.attributes,
+    att.source.attributes,
+    att.typed.attributes,
+    
+    ## (reference) Reference
+    attribute ref { data.text }?,
+    
+    ## (reference) Reference
+    attribute ref { data.text }?,
+    
+    ## Reference
+    attribute ref { data.text }?,
+    empty
+  }
+listenerStatus =
+  
+  ## Contains information on the degree of professionalism of the listener in his reading activities.
+  element listenerStatus { empty, att.global.attributes, empty }
+textread =
+  
+  ## Contains information on the text read during the reading experience.
+  element textread {
+    (author*,
+     title*,
+     genre*,
+     provenance*,
+     langUsage*,
+     origLanguage*,
+     objectType*),
+    att.canonical.attribute.key,
+    att.datable.attributes,
+    att.datable.custom.attributes,
+    att.dimensions.attributes,
+    att.editLike.attributes,
+    att.global.attributes,
+    att.global.analytic.attributes,
+    att.global.change.attributes,
+    att.global.facs.attributes,
+    att.global.linking.attributes,
+    att.global.rendition.attributes,
+    att.global.responsibility.attributes,
+    att.naming.attribute.role,
+    att.naming.attribute.nymRef,
+    att.canonical.attribute.key,
+    att.personal.attribute.full,
+    att.personal.attribute.sort,
+    att.naming.attribute.role,
+    att.naming.attribute.nymRef,
+    att.canonical.attribute.key,
+    att.ranging.attributes,
+    att.source.attributes,
+    att.typed.attributes,
+    
+    ## (reference) Reference
+    attribute ref { data.text }?,
+    
+    ## (reference) Reference
+    attribute ref { data.text }?,
+    
+    ## (reference) Reference
+    attribute ref { data.text }?,
+    
+    ## Reference
+    attribute ref { data.text }?,
+    empty
+  }
+genre =
+  
+  ## Contains information about the literary genre of the text read during the reading experience
+  element genre { empty, att.global.attributes, empty }
+origLanguage =
+  
+  ## Contains information on the original language of the text read during the reading experience. 
+  element origLanguage {
+    language*,
+    att.global.attributes,
+    
+    ## Reference
+    attribute ref { data.text }?,
+    empty
+  }
+experienceType =
+  
+  ## Contains information about the type of reading experience
+  element experienceType {
+    empty,
+    att.global.attributes,
+    
+    ## Reference
+    attribute ref { data.text }?,
+    empty
+  }
+emotion =
+  
+  ## Contains information regarding the emotions generated by the reading experience.
+  element emotion {
+    empty,
+    att.global.attributes,
+    
+    ## Reference
+    attribute ref { data.text }?,
+    
+    ## Type
+    attribute type { data.text }?,
+    empty
+  }
 readingExpDesc =
   
   ##
   element readingExpDesc { readingExp*, att.global.attributes, empty }
+readingExpRef =
+  
+  ##
+  element readingExpRef {
+    macro.paraContent,
+    att.global.attributes,
+    
+    ## Reference
+    attribute ref { data.text }?,
+    empty
+  }
+sender =
+  
+  ## sender, writer
+  element sender {
+    persName*,
+    sex*,
+    birth*,
+    occupation*,
+    country*,
+    education*,
+    faith*,
+    nationality*,
+    readerStatus*
+  }
+addressee =
+  
+  ## Recipient of a correspondence
+  element addressee {
+    persName*,
+    sex*,
+    birth*,
+    occupation*,
+    country*,
+    education*,
+    faith*,
+    nationality*,
+    readerStatus*
+  }
 start = TEI | teiCorpus
