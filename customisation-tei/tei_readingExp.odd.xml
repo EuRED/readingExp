@@ -29,12 +29,7 @@
 	<text>
 		<body>
 			<head>TEI Complete</head>
-			<p><emph>all</emph> of the TEI (P5) modules. This is a very useful
-				starting place for manually creating your own customizations
-				— it is much easier to delete the modules you do not
-				want than to add the modules you do. Furthermore this
-				customization often proves helpful for testing TEI
-				software.ReadingExp TEI validator.</p>
+			<p>ReadingExp TEI validator</p>
 			<p>However, this particular TEI customization is <emph>not
 					recommended</emph> for actual use for encoding documents. It
 				produces schemas and reference documentation that will be much
@@ -71,7 +66,15 @@
 				<moduleRef key="verse"/>
 				<moduleRef key="tagdocs"/>
 				<elementSpec ident="readingExp" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
+					<desc>Contains all the description of the reading experience elements.</desc>
+					<attList>
+						<attDef ident="ref" mode="add">
+							<desc>Reference</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+					</attList>
 					<classes>
 						<memberOf key="att.global"/>
 					</classes>
@@ -112,19 +115,31 @@
 							</rng:zeroOrMore>
 						</rng:group>
 					</content>
-					<attList>
-						<attDef ident="ref" mode="add">
-							<desc>Reference</desc>
-							<datatype minOccurs="0" maxOccurs="1">
-								<rng:ref name="data.text"/>
-							</datatype>
-						</attDef>
-					</attList>
 				</elementSpec>
 				<elementSpec ident="reader" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
+					<desc>Contains all the information on the listener.</desc>
 					<classes>
+						<memberOf key="model.nameLike"/>
+						<memberOf key="model.personLike"/>
+						<memberOf key="att.canonical"/>
+						<memberOf key="att.datable"/>
+						<memberOf key="att.datable.custom"/>
+						<memberOf key="att.datable.iso"/>
+						<memberOf key="att.datable.w3c"/>
+						<memberOf key="att.dimensions"/>
+						<memberOf key="att.editLike"/>
 						<memberOf key="att.global"/>
+						<memberOf key="att.global.analytic"/>
+						<memberOf key="att.global.change"/>
+						<memberOf key="att.global.facs"/>
+						<memberOf key="att.global.linking"/>
+						<memberOf key="att.global.rendition"/>
+						<memberOf key="att.global.responsibility"/>
+						<memberOf key="att.naming"/>
+						<memberOf key="att.personal"/>
+						<memberOf key="att.ranging"/>
+						<memberOf key="att.source"/>
+						<memberOf key="att.typed"/>
 					</classes>
 					<content>
 						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
@@ -159,24 +174,7 @@
 					</content>
 				</elementSpec>
 				<elementSpec ident="readerStatus" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
-					<classes>
-						<memberOf key="att.global"/>
-					</classes>
-					<content>
-						<rng:zeroOrMore>
-							<rng:choice>
-								<rng:attribute>
-									<rng:anyName/>
-								</rng:attribute>
-								<rng:text/>
-								<rng:element>
-									<rng:anyName/>
-									<ref name="readerStatus"/>
-								</rng:element>
-							</rng:choice>
-						</rng:zeroOrMore>
-					</content>
+					<desc>Contains information on the degree of professionalism of the reader in his reading activities.</desc>
 					<attList>
 						<attDef ident="ref" mode="add">
 							<desc>Reference</desc>
@@ -185,11 +183,61 @@
 							</datatype>
 						</attDef>
 					</attList>
-				</elementSpec>
-				<elementSpec ident="listener" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
 					<classes>
 						<memberOf key="att.global"/>
+						<memberOf key="att.global.analytic"/>
+						<memberOf key="att.global.change"/>
+						<memberOf key="att.global.facs"/>
+						<memberOf key="att.global.linking"/>
+						<memberOf key="att.global.rendition"/>
+						<memberOf key="att.global.responsibility"/>
+					</classes>
+					<content>
+						<zeroOrMore>
+							<choice>
+								<attribute>
+									<anyName/>
+								</attribute>
+								<text/>
+								<element>
+									<anyName/>
+									<ref name="readerStatus"/>
+								</element>
+							</choice>
+						</zeroOrMore>
+					</content>
+				</elementSpec>
+				<elementSpec ident="listener" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc>Contains all the information on the listener.</desc>
+					<attList>
+						<attDef ident="ref" mode="add">
+							<desc>Reference</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+					</attList>
+					<classes>
+						<memberOf key="model.nameLike"/>
+						<memberOf key="model.personLike"/>
+						<memberOf key="att.canonical"/>
+						<memberOf key="att.datable"/>
+						<memberOf key="att.datable.custom"/>
+						<memberOf key="att.datable.iso"/>
+						<memberOf key="att.datable.w3c"/>
+						<memberOf key="att.dimensions"/>
+						<memberOf key="att.editLike"/>
+						<memberOf key="att.global"/>
+						<memberOf key="att.global.analytic"/>
+						<memberOf key="att.global.change"/>
+						<memberOf key="att.global.facs"/>
+						<memberOf key="att.global.linking"/>
+						<memberOf key="att.global.rendition"/>
+						<memberOf key="att.global.responsibility"/>
+						<memberOf key="att.personal"/>
+						<memberOf key="att.ranging"/>
+						<memberOf key="att.source"/>
+						<memberOf key="att.typed"/>
 					</classes>
 					<content>
 						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
@@ -222,17 +270,9 @@
 							</rng:zeroOrMore>
 						</rng:group>
 					</content>
-					<attList>
-						<attDef ident="ref" mode="add">
-							<desc>Reference</desc>
-							<datatype minOccurs="0" maxOccurs="1">
-								<rng:ref name="data.text"/>
-							</datatype>
-						</attDef>
-					</attList>
 				</elementSpec>
 				<elementSpec ident="listenerStatus" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
+					<desc>Contains information on the degree of professionalism of the listener in his reading activities.</desc>
 					<classes>
 						<memberOf key="att.global"/>
 					</classes>
@@ -240,7 +280,7 @@
 					</content>
 				</elementSpec>
 				<elementSpec ident="textread" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
+					<desc>Contains information on the text read during the reading experience.</desc>
 					<attList>
 						<attDef ident="ref" mode="add">
 							<desc>Reference</desc>
@@ -250,7 +290,25 @@
 						</attDef>
 					</attList>
 					<classes>
+						<memberOf key="model.biblLike"/>
+						<memberOf key="model.personLike"/>
+						<memberOf key="att.canonical"/>
+						<memberOf key="att.datable"/>
+						<memberOf key="att.datable.custom"/>
+						<memberOf key="att.dimensions"/>
+						<memberOf key="att.editLike"/>
 						<memberOf key="att.global"/>
+						<memberOf key="att.global.analytic"/>
+						<memberOf key="att.global.change"/>
+						<memberOf key="att.global.facs"/>
+						<memberOf key="att.global.linking"/>
+						<memberOf key="att.global.rendition"/>
+						<memberOf key="att.global.responsibility"/>
+						<memberOf key="att.naming"/>
+						<memberOf key="att.personal"/>
+						<memberOf key="att.ranging"/>
+						<memberOf key="att.source"/>
+						<memberOf key="att.typed"/>
 					</classes>
 					<content>
 						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
@@ -279,7 +337,7 @@
 					</content>
 				</elementSpec>
 				<elementSpec ident="genre" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
+					<desc>Contains information about the literary genre of the text read during the reading experience</desc>
 					<classes>
 						<memberOf key="att.global"/>
 					</classes>
@@ -287,8 +345,18 @@
 					</content>
 				</elementSpec>
 				<elementSpec ident="origLanguage" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
+					<desc>Contains information on the original language of the text read during the reading experience.&#13;
+					</desc>
+					<attList>
+						<attDef ident="ref" mode="add">
+							<desc>Reference</desc>
+							<datatype minOccurs="0" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+					</attList>
 					<classes>
+						<memberOf key="model.profileDescPart"/>
 						<memberOf key="att.global"/>
 					</classes>
 					<content>
@@ -298,22 +366,9 @@
 							</rng:zeroOrMore>
 						</rng:group>
 					</content>
-					<attList>
-						<attDef ident="ref" mode="add">
-							<desc>Reference</desc>
-							<datatype minOccurs="0" maxOccurs="1">
-								<rng:ref name="data.text"/>
-							</datatype>
-						</attDef>
-					</attList>
 				</elementSpec>
 				<elementSpec ident="experienceType" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
-					<classes>
-						<memberOf key="att.global"/>
-					</classes>
-					<content>
-					</content>
+					<desc>Contains information about the type of reading experience</desc>
 					<attList>
 						<attDef ident="ref" mode="add">
 							<desc>Reference</desc>
@@ -322,26 +377,14 @@
 							</datatype>
 						</attDef>
 					</attList>
-				</elementSpec>
-				<elementSpec ident="emotion" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
 					<classes>
 						<memberOf key="att.global"/>
 					</classes>
 					<content>
-						<rng:zeroOrMore>
-							<rng:choice>
-								<rng:attribute>
-									<rng:anyName/>
-								</rng:attribute>
-								<rng:text/>
-								<rng:element>
-									<rng:anyName/>
-									<rng:ref name="emotion"/>
-								</rng:element>
-							</rng:choice>
-						</rng:zeroOrMore>
 					</content>
+				</elementSpec>
+				<elementSpec ident="emotion" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc>Contains information regarding the emotions generated by the reading experience.</desc>
 					<attList>
 						<attDef ident="ref" mode="add">
 							<desc>Reference</desc>
@@ -356,6 +399,23 @@
 							</datatype>
 						</attDef>
 					</attList>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+						<zeroOrMore>
+							<choice>
+								<attribute>
+									<anyName/>
+								</attribute>
+								<text/>
+								<element>
+									<anyName/>
+									<ref name="emotion"/>
+								</element>
+							</choice>
+						</zeroOrMore>
+					</content>
 				</elementSpec>
 				<elementSpec ident="readingExpDesc" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
@@ -385,7 +445,97 @@
 						<memberOf key="model.pPart.data"/>
 						<memberOf key="att.global"/>
 					</classes>
-					<content><rng:ref name="macro.paraContent"/></content>
+					<content>
+						<rng:ref name="macro.paraContent"/>
+					</content>
+				</elementSpec>
+				<elementSpec ident="correspDesc" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc>Description of a correspondence. Encapsulates information about the sender(s) and the recipient(s)</desc>
+					<classes>
+						<memberOf key="model.global"/>
+					</classes>
+					<content>
+					</content>
+				</elementSpec>
+				<elementSpec ident="sender" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc>sender, writer</desc>
+					<classes>
+						<memberOf key="model.personLike"/>
+					</classes>
+					<content>
+						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+							<rng:zeroOrMore>
+								<rng:ref name="persName"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="sex"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="birth"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="occupation"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="country"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="education"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="faith"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="nationality"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="readerStatus"/>
+							</rng:zeroOrMore>
+						</rng:group>
+					</content>
+				</elementSpec>
+				<elementSpec ident="addressee" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc>Recipient of a correspondence</desc>
+					<classes>
+						<memberOf key="model.personLike"/>
+					</classes>
+					<content>
+						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+							<rng:zeroOrMore>
+								<rng:ref name="persName"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="sex"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="birth"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="occupation"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="country"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="education"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="faith"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="nationality"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="readerStatus"/>
+							</rng:zeroOrMore>
+						</rng:group>
+					</content>
+				</elementSpec>
+				<elementSpec ident="textProvenance" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc>Contains information about the text read during the reading experience</desc>
+					<classes/>
+					<content>
+					</content>
 				</elementSpec>
 			</schemaSpec>
 		</body>
