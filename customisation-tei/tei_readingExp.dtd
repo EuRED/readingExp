@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2015-10-01T21:53:35Z. .TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
+DTD generated from ODD source 2015-10-02T11:25:27Z. .TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
 TEI Edition: Version 2.8.0. Last updated on
 	6th April 2015, revision 13197
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -1013,11 +1013,11 @@ to %data.word;  #IMPLIED'>
 <!ENTITY % model.nameLike_sequenceOptional "%model.nameLike.agent;?, %model.offsetLike;?, %model.placeStateLike;?, rs?, lang?, idno?, %model.persNamePart;?, reader?, listener?"> 
 <!ENTITY % model.nameLike_sequenceOptionalRepeatable "%model.nameLike.agent;*, %model.offsetLike;*, %model.placeStateLike;*, rs*, lang*, idno*, %model.persNamePart;*, reader*, listener*"> 
 <!ENTITY % model.nameLike_sequenceRepeatable "%model.nameLike.agent;+, %model.offsetLike;+, %model.placeStateLike;+, rs+, lang+, idno+, %model.persNamePart;+, reader+, listener+"> 
-<!ENTITY % model.global "%model.global.meta; |%model.milestoneLike; |%model.noteLike; |%model.global.edit; |notatedMusic |figure |%model.global.spoken; |metamark |correspDesc"> 
-<!ENTITY % model.global_sequence "%model.global.meta;, %model.milestoneLike;, %model.noteLike;, %model.global.edit;, notatedMusic, figure, %model.global.spoken;, metamark, correspDesc"> 
-<!ENTITY % model.global_sequenceOptional "%model.global.meta;?, %model.milestoneLike;?, %model.noteLike;?, %model.global.edit;?, notatedMusic?, figure?, %model.global.spoken;?, metamark?, correspDesc?"> 
-<!ENTITY % model.global_sequenceOptionalRepeatable "%model.global.meta;*, %model.milestoneLike;*, %model.noteLike;*, %model.global.edit;*, notatedMusic*, figure*, %model.global.spoken;*, metamark*, correspDesc*"> 
-<!ENTITY % model.global_sequenceRepeatable "%model.global.meta;+, %model.milestoneLike;+, %model.noteLike;+, %model.global.edit;+, notatedMusic+, figure+, %model.global.spoken;+, metamark+, correspDesc+"> 
+<!ENTITY % model.global "%model.global.meta; |%model.milestoneLike; |%model.noteLike; |%model.global.edit; |notatedMusic |figure |%model.global.spoken; |metamark |correspDesc |testimony"> 
+<!ENTITY % model.global_sequence "%model.global.meta;, %model.milestoneLike;, %model.noteLike;, %model.global.edit;, notatedMusic, figure, %model.global.spoken;, metamark, correspDesc, testimony"> 
+<!ENTITY % model.global_sequenceOptional "%model.global.meta;?, %model.milestoneLike;?, %model.noteLike;?, %model.global.edit;?, notatedMusic?, figure?, %model.global.spoken;?, metamark?, correspDesc?, testimony?"> 
+<!ENTITY % model.global_sequenceOptionalRepeatable "%model.global.meta;*, %model.milestoneLike;*, %model.noteLike;*, %model.global.edit;*, notatedMusic*, figure*, %model.global.spoken;*, metamark*, correspDesc*, testimony*"> 
+<!ENTITY % model.global_sequenceRepeatable "%model.global.meta;+, %model.milestoneLike;+, %model.noteLike;+, %model.global.edit;+, notatedMusic+, figure+, %model.global.spoken;+, metamark+, correspDesc+, testimony+"> 
 <!ENTITY % model.featureVal "%model.featureVal.complex; |%model.featureVal.single;"> 
 <!ENTITY % model.featureVal_sequence "%model.featureVal.complex;, %model.featureVal.single;"> 
 <!ENTITY % model.featureVal_sequenceOptional "%model.featureVal.complex;?, %model.featureVal.single;?"> 
@@ -4324,7 +4324,7 @@ marks (none|some|all) #IMPLIED >
  %att.global.responsibility.attributes;
 ref CDATA  #IMPLIED >
 <!--doc:Contains all the description of the reading experience elements. -->
-<!ELEMENT readingExp (respStmt*,date*,reader*,listener*,place*,langUsage*,textread*,experienceType*,note*,title*,emotion*)>
+<!ELEMENT readingExp (respStmt*,date*,reader*,listener*,place*,langUsage*,textread*,experienceType*,note*,title*,emotion*,testimony?)>
 <!ATTLIST readingExp xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST readingExp
  %att.global.attributes;
@@ -5080,6 +5080,12 @@ type %data.enumerated;  "text"  >
  %att.editLike.attributes;
  %att.naming.attributes;
  %att.typed.attributes; >
+<!--doc:Direct or indirect testimony -->
+<!ELEMENT testimony  EMPTY>
+<!ATTLIST testimony xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
+<!ATTLIST testimony
+ %att.global.attributes;
+type (direct|indirect|unknown|not set) "direct"  >
 <!--doc:contains a single text of any kind, whether unitary or composite, for example a poem or drama, a collection of essays, a novel, a dictionary, or a corpus sample. [4. Default Text Structure 15.1. Varieties of Composite Text] -->
 <!ELEMENT text ((%model.global;)*,(front,(%model.global;)*)?,(body|group),(%model.global;)*,(back,(%model.global;)*)?)>
 <!ATTLIST text xmlns CDATA "http://www.tei-c.org/ns/1.0">

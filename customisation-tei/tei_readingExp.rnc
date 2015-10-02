@@ -8,7 +8,7 @@ namespace s = "http://www.ascc.net/xml/schematron"
 namespace sch = "http://purl.oclc.org/dsdl/schematron"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2015-10-01T21:54:24Z. .
+# Schema generated from ODD source 2015-10-02T11:22:16Z. .
 # TEI Edition: Version 2.8.0. Last updated on
 #	6th April 2015, revision 13197
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 2.8.0/
@@ -1812,6 +1812,7 @@ model.global =
   | model.global.spoken
   | metamark
   | correspDesc
+  | testimony
 model.featureVal = model.featureVal.complex | model.featureVal.single
 model.biblPart =
   model.respLike
@@ -10785,7 +10786,8 @@ readingExp =
      experienceType*,
      note*,
      title*,
-     emotion*),
+     emotion*,
+     testimony?),
     att.global.attributes,
     
     ## Reference
@@ -11023,5 +11025,30 @@ addressee =
     faith*,
     nationality*,
     readerStatus*
+  }
+testimony =
+  
+  ## Direct or indirect testimony
+  element testimony {
+    empty,
+    att.global.attributes,
+    
+    ## Is the testimony direct or indirect ?
+    [ a:defaultValue = "direct" ]
+    attribute type {
+      
+      ##
+      "direct"
+      | 
+        ##
+        "indirect"
+      | 
+        ##
+        "unknown"
+      | 
+        ##
+        "not set"
+    },
+    empty
   }
 start = TEI | teiCorpus
