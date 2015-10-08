@@ -152,6 +152,9 @@
             <note>
             </note>
             <emotion type="#OCC/happy-for"></emotion>
+            <testimony type"direct|undirect|unknown"></testimony>
+            <sourceRelialabiblity ref=""></sourceRelialabiblity>
+            
          </readingExp>
       </readingExpDesc>
    </teiHeader>
