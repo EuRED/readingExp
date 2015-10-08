@@ -134,7 +134,7 @@
                <title/>
                <genre/>
                <!-- Voir http://id.loc.gov/search/?q=memberOf:http://id.loc.gov/authorities/genreForms/collection_LCGFT_General -->
-               <provenance/>
+               <textProvenance/>
                <langUsage>
                   <language ident="fr-FR">Français</language>
                              <!-- Définit la langue dans laquelle le texte est lu. @value non retenu (trop complexe à mettre en œuvre). @type ISO 639/2  -->
