@@ -152,17 +152,26 @@
             <note>
             </note>
             <emotion type="#OCC/happy-for"></emotion>
+            <testimony type"direct|undirect|unknown"></testimony>
+            <sourceRelialabiblity ref=""></sourceRelialabiblity>
+            
          </readingExp>
       </readingExpDesc>
    </teiHeader>
    <text>
       <body>
-         <!-- Problème de pointeur vers <textread>. <title> devrait être remplacé à chaque fois par une balise <textread ref="#">. <textread> devrait donc être répété autant de fois que nécessaire -->
+         <!-- Problème de pointeur vers <textread>. <title> devrait être remplacé à chaque fois par une balise 
+         	<textread ref="#">. <textread> devrait donc être répété autant de fois que nécessaire -->
          <p>22 avril. Jours d'été. Je ne tarderai guère à prendre mon premier bain, tire déjà des
             plans pour aller chaque midi aux Catalans. </p>
-         <p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de <persName><forename>Virginia</forename><surname>Woolf</surname></persName>. <readingExpRef ref="#eured/c01-2015100573321">Je lis maintenant <title>Années</title>, qui me
+         <p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de 
+         	<persName><forename>Virginia</forename><surname>Woolf</surname></persName>. 
+ 		<readingExpRef ref="#eured/c01-2015100573321">Je lis maintenant <title>Années</title>, qui me
             rappelle, en plus léger, Les <title>Buddenbrooks</title>, et où certaines descriptions de la campagne
-            m'émeuvent comme celles d'<title>Anna Karénine</title></readingExpRef>; mais c'est aux <title>Vagues</title> que je continue à penser
+            m'émeuvent comme celles d'<title>Anna Karénine</title></readingExpRef>; mais 
+            <readingExpRef ref="#eured/test2">c'est aux <title>Vagues</title> que je continue à penser
             avec un attachement à demi nostalgique (je les lisais à Berlin).
-            </p></body></text></TEI>
-
+            </readingExpRef></p>
+        </body>
+   </text>
+</TEI>

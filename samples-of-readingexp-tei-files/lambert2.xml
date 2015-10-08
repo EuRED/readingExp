@@ -16,9 +16,13 @@
             </author>
          </titleStmt>
                <publicationStmt>
-            <!-- Dans <availability> faire apparaître toutes les informations relatives à la disponibilité du texte (censuré, partiellement censuré ...)  -->
+            <!-- Dans <availability> faire apparaître toutes les informations relatives à la disponibilité du 
+            texte (censuré, partiellement censuré ...)  -->
             <publisher></publisher>
-                  <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
+                  <availability status="free">
+                  	<p>Disponible à l'adresse <ref 
+                  	target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p>
+          	</availability>
                   <date when="2005">2005</date>
                </publicationStmt>
          <sourceDesc>
@@ -137,7 +141,8 @@
                <provenance/>
                <langUsage>
                   <language ident="fr-FR">Français</language>
-                             <!-- Définit la langue dans laquelle le texte est lu. @value non retenu (trop complexe à mettre en œuvre). @type ISO 639/2  -->
+                             <!-- Définit la langue dans laquelle le texte est lu. @value non retenu 
+                             (trop complexe à mettre en œuvre). @type ISO 639/2  -->
                </langUsage>
                <!-- Nouvelle balise. Décrit la langue originale du texte lu. @type ISO 639/2. Nouvelle balise -->
                <origLanguage>
@@ -160,12 +165,18 @@
    </teiHeader>
    <text>
       <body>
-         <!-- Problème de pointeur vers <textread>. <title> devrait être remplacé à chaque fois par une balise <textread ref="#">. <textread> devrait donc être répété autant de fois que nécessaire -->
+         <!-- Problème de pointeur vers <textread>. <title> devrait être remplacé à chaque fois par une balise 
+         	<textread ref="#">. <textread> devrait donc être répété autant de fois que nécessaire -->
          <p>22 avril. Jours d'été. Je ne tarderai guère à prendre mon premier bain, tire déjà des
             plans pour aller chaque midi aux Catalans. </p>
-         <p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de <persName><forename>Virginia</forename><surname>Woolf</surname></persName>. <readingExpRef ref="#eured/c01-2015100573321">Je lis maintenant <title>Années</title>, qui me
+         <p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de 
+         	<persName><forename>Virginia</forename><surname>Woolf</surname></persName>. 
+ 		<readingExpRef ref="#eured/c01-2015100573321">Je lis maintenant <title>Années</title>, qui me
             rappelle, en plus léger, Les <title>Buddenbrooks</title>, et où certaines descriptions de la campagne
-            m'émeuvent comme celles d'<title>Anna Karénine</title></readingExpRef>; mais <readingExpRef ref="#eured/test2">c'est aux <title>Vagues</title> que je continue à penser
+            m'émeuvent comme celles d'<title>Anna Karénine</title></readingExpRef>; mais 
+            <readingExpRef ref="#eured/test2">c'est aux <title>Vagues</title> que je continue à penser
             avec un attachement à demi nostalgique (je les lisais à Berlin).
-            </readingExpRef></p></body></text></TEI>
-
+            </readingExpRef></p>
+        </body>
+   </text>
+</TEI>
