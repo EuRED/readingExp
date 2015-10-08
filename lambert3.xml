@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!DOCTYPE TEI SYSTEM "customisation-tei/tei_readingExp.dtd">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+           <title>Journal (septembre 1940-septembre 1942)</title>
+            <author>
+               <persName>
+                  <forename>Jean</forename>
+                  <surname>Lambert</surname>
+               </persName>
+            </author>
+         </titleStmt>
+               <publicationStmt>
+            <!-- Dans <availability> faire apparaître toutes les informations relatives à la disponibilité du texte (censuré, partiellement censuré ...)  -->
+            <publisher></publisher>
+                  <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
+                  <date when="2005">2005</date>
+               </publicationStmt>
+         <sourceDesc>
+            <!-- Dans le cas d'un témoignage provenant d'un manuscrit non publié. msItem non répété car les infos titre/auteur sont déjà prises en compte dans titleStmt -->
+            <msDesc>
+               <msIdentifier>
+                  <settlement></settlement>
+                  <repository></repository>
+                  <idno></idno>
+               </msIdentifier>
+            </msDesc>
+            <!-- Dans le cas d'un témoignage provenant d'un imprimé (monographie)-->
+            <biblStruct>
+               <monogr>
+                  <!-- Nécessité de répéter les champs <author> et <title> -->
+                  <author>
+                     <persName>
+                        <forename>Jean</forename>
+                        <surname>Lambert</surname>
+                     </persName>
+                  </author>
+                  <title>Journal (septembre 1940-septembre 1942)</title>
+                  <imprint>
+                     <publisher>Presses de l'Université de Provence</publisher>
+                     <pubPlace>Marseille</pubPlace>
+                     <date when="2005">2005</date>
+                  </imprint>
+                 <biblScope></biblScope>
+               </monogr>
+               <!-- Dans le cas d'une publication en ligne -->
+            </biblStruct>
+            <!-- Dans tous les cas, dans le cas d'une correspondance, identifier le scripteur et le destinataire -->
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <correspDesc>
+               <correspAction type="sending">
+                  <persName>
+                     <forename></forename>
+                     <surname></surname>
+                  </persName>
+               </correspAction>
+               <correspAction type="receiving">
+                  <persName>
+                     <forename></forename>
+                     <surname></surname>
+                  </persName>
+               </correspAction>
+      	</correspDesc>
+	  </profileDesc>
+      <readingExpDesc>
+         <readingExp ref="#eured/c01-2015100573321">
+            <respStmt>
+               <resp>Edited by</resp>
+               <persName>
+                  <forename>François</forename>
+                  <surname>Vignale</surname>
+               </persName>
+            </respStmt>
+            <date when="1941-04-22"/>
+            <reader>
+               <persName>
+                  <forename>Jean</forename>
+                  <surname>Lambert</surname>
+               </persName>
+               <sex>M</sex>
+               <birth>1914-12-31</birth>
+               <occupation/>
+               <!--  A lier avec Hisco et supprimer la balise socecStatus-->
+               <country/>
+               <!-- A lier avec codes ISO -->
+               <education/>
+               <!-- Mettre en place un thésaurus simple (4-5 possibilités) -->
+               <faith/>
+               <!-- A lier avec http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1266.02011?OpenDocument table 1.3  -->
+               <nationality/>
+               <readerStatus ref="#professional">professional</readerStatus>
+            </reader>
+            <listener>
+               <persName>
+                  <forename />
+                  <surname />
+               </persName>
+               <sex />
+               <birth />
+               <occupation />
+               <!--  A lier avec Hisco et supprimer la balise socecStatus -->
+               <country />
+               <!-- A lier avec codes ISO -->
+               <education />
+               <!-- Mettre en place un thésaurus simple (4-5 possibilités) -->
+               <faith />
+               <!-- A lier avec http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1266.02011?OpenDocument table 1.3  -->
+               <nationality />
+               <listenerStatus />
+            </listener>
+            <place>
+               <placeName/>
+               <location>
+                  <geo/>
+                  <country>France</country>
+                  <settlement type="city">Marseille</settlement>
+                  <district/>
+               </location>
+            </place>     
+            <textread>
+               <author>
+                  <persName>
+                     <forename/>
+                     <surname/>
+                  </persName> 
+               </author>
+               <title/>
+               <genre/>
+               <!-- Voir http://id.loc.gov/search/?q=memberOf:http://id.loc.gov/authorities/genreForms/collection_LCGFT_General -->
+               <provenance/>
+               <langUsage>
+                  <language ident="fr-FR">Français</language>
+                             <!-- Définit la langue dans laquelle le texte est lu. @value non retenu (trop complexe à mettre en œuvre). @type ISO 639/2  -->
+               </langUsage>
+               <!-- Nouvelle balise. Décrit la langue originale du texte lu. @type ISO 639/2. Nouvelle balise -->
+               <origLanguage>
+                  <language ident=""/>
+               </origLanguage>
+               <!-- @type ISO 639/2 -->
+               <objectType ref="#"/>
+               <!-- Décrit la forme du document lu. Thésaurus à reprendre -->
+            </textread>
+            <experienceType ref="#"/>
+            <!-- 9 combinaisons possibles  (@ref ou @type) -->
+            <note>
+            </note>
+            <emotion type="#OCC/happy-for"></emotion>
+         </readingExp>
+      </readingExpDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <!-- Problème de pointeur vers <textread>. <title> devrait être remplacé à chaque fois par une balise <textread ref="#">. <textread> devrait donc être répété autant de fois que nécessaire -->
+         <p>22 avril. Jours d'été. Je ne tarderai guère à prendre mon premier bain, tire déjà des
+            plans pour aller chaque midi aux Catalans. </p>
+         <p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de <persName><forename>Virginia</forename><surname>Woolf</surname></persName>. <readingExpRef ref="#eured/c01-2015100573321">Je lis maintenant <title>Années</title>, qui me
+            rappelle, en plus léger, Les <title>Buddenbrooks</title>, et où certaines descriptions de la campagne
+            m'émeuvent comme celles d'<title>Anna Karénine</title></readingExpRef>; mais c'est aux <title>Vagues</title> que je continue à penser
+            avec un attachement à demi nostalgique (je les lisais à Berlin).
+            </p></body></text></TEI>
+
