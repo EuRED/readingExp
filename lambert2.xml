@@ -6,9 +6,8 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
-         <titleStmt><zorg></zorg>
- 
-            <title>Journal (septembre 1940-septembre 1942)</title>
+         <titleStmt>
+           <title>Journal (septembre 1940-septembre 1942)</title>
             <author>
                <persName>
                   <forename>Jean</forename>
@@ -71,7 +70,7 @@
       </correspDesc>
 </profileDesc>
       <readingExpDesc>
-         <readingExp ref="#eured/test1">
+         <readingExp ref="#eured/c01-2015100573321">
             <respStmt>
                <resp>Edited by</resp>
                <persName>
@@ -164,7 +163,7 @@
          <!-- Problème de pointeur vers <textread>. <title> devrait être remplacé à chaque fois par une balise <textread ref="#">. <textread> devrait donc être répété autant de fois que nécessaire -->
          <p>22 avril. Jours d'été. Je ne tarderai guère à prendre mon premier bain, tire déjà des
             plans pour aller chaque midi aux Catalans. </p>
-         <p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de <persName><forename>Virginia</forename><surname>Woolf</surname></persName>. <readingExpRef ref="#eured/test1">Je lis maintenant <title>Années</title>, qui me
+         <p>J'achevais de lire <title>Orlando</title>, voilà deux semaines, quand j'ai appris la mort de <persName><forename>Virginia</forename><surname>Woolf</surname></persName>. <readingExpRef ref="#eured/c01-2015100573321">Je lis maintenant <title>Années</title>, qui me
             rappelle, en plus léger, Les <title>Buddenbrooks</title>, et où certaines descriptions de la campagne
             m'émeuvent comme celles d'<title>Anna Karénine</title></readingExpRef>; mais <readingExpRef ref="#eured/test2">c'est aux <title>Vagues</title> que je continue à penser
             avec un attachement à demi nostalgique (je les lisais à Berlin).
