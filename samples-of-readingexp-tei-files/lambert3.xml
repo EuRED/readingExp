@@ -22,7 +22,7 @@
                   <date when="2005">2005</date>
                </publicationStmt>
          <sourceDesc>
-            <!-- Dans le cas d'un témoignage provenant d'un manuscrit non publié. msItem non répété car les infos titre/auteur sont déjà prises en compte dans titleStmt -->
+            <!-- Dans le cas d'un témoignage provenant d'un manuscrit non publié, msItem non répété car les infos titre/auteur sont déjà prises en compte dans titleStmt -->
             <msDesc>
                <msIdentifier>
                   <settlement></settlement>
