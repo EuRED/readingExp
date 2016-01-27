@@ -140,10 +140,7 @@
             <experienceType ref="#"/>
             <posture type="#"></posture>
             <lighting type ="#"></lighting>
-            <location>
-               <outdoor type="#"></outdoor>
-               <indoor type="#"></indoor>
-            </location>
+            <location type="#"></location>
             <intensity type="#"></intensity>
             <emotion type="#OCC/happy-for"></emotion>
             <testimony type"direct|undirect|unknown"></testimony>
