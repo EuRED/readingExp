@@ -134,8 +134,9 @@
                </langUsage>
                <origLanguage>
                   <language ident=""/>
-               </origLa nguage>
+               </origLanguage>
                <textform type="#"/>
+               <textStatus type="#"></textStatus>
             </textread>
             <experienceType ref="#"/>
             <posture type="#"></posture>
