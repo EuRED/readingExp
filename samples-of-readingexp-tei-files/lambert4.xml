@@ -81,7 +81,6 @@
             </respStmt>
             <date when="1941-04-22"/>
             <time/>
-          
             <reader>
                <persName>
                   <forename>Jean</forename>
@@ -90,6 +89,7 @@
                </persName>
                <sex>M</sex>
                <birth>1914-12-31</birth>
+               <death/>
                <occupation/>
                <country/>
                <education/>
@@ -105,6 +105,7 @@
                </persName>
                <sex />
                <birth />
+               <death/>
                <occupation />
                <country />
                <education />
