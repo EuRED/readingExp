@@ -71,8 +71,7 @@
          </correspDesc>
       </profileDesc>
       <readingExpDesc>
-         <readingExp ref="#eured/c01-2015100573321">
-            <respStmt>
+      	    <respStmt>
                <resp>Edited by</resp>
                <persName>
                   <forename>François</forename>
@@ -141,16 +140,17 @@
                <textform type="#"/>
                <textStatus type="#"></textStatus>
             </textread>
-            <experienceType ref="#"/>
-            <posture type="#"></posture>
-            <lighting type ="#"></lighting>
-            <location type="#"></location>
-            <intensity type="#"></intensity>
-            <emotion type="#OCC/happy-for"></emotion>
-            <testimony type"direct|undirect|unknown"></testimony>
-            <sourceRelialabiblity ref=""></sourceRelialabiblity>
-            <note></note>
-         </readingExp>
+            <readingExp>
+            	<experienceType ref="#"/>
+        	<posture type="#"></posture>
+            	<lighting type ="#"></lighting>
+            	<location type="#"></location>
+            	<intensity type="#"></intensity>
+            	<emotion type="#OCC/happy-for"></emotion>
+            	<testimony type"direct|undirect|unknown"></testimony>
+            	<sourceRelialabiblity ref=""></sourceRelialabiblity>
+            	<note></note>
+            </readingExp>
       </readingExpDesc>
    </teiHeader>
    <text>
