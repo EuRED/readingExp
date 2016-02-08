@@ -149,6 +149,7 @@
             	<intensity type="#"></intensity>
             	<emotion type="#OCC/happy-for"></emotion>
             	<testimony type"direct|undirect|unknown"></testimony>
+            	<expFrequency type="#"></expFrequency>
             	<sourceRelialabiblity ref=""></sourceRelialabiblity>
             	<note></note>
             </readingExp>
