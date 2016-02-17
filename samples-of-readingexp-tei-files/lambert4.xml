@@ -25,8 +25,11 @@
             <!-- Dans le cas d'un témoignage provenant d'un manuscrit non publié, msItem non répété car les infos titre/auteur sont déjà prises en compte dans titleStmt -->
             <msDesc>
                <msIdentifier>
+               	  <country></country>
                   <settlement></settlement>
+                  <institution></institution>
                   <repository></repository>
+                  <collection></collection>
                   <idno></idno>
                </msIdentifier>
             </msDesc>
@@ -69,6 +72,7 @@
                </persName>
             </correspAction>
          </correspDesc>
+         <langUsage ident="#"></langUsage>
       </profileDesc>
       <readingExpDesc>
       	<readingExpRef ref="#"></readingExpRef>
@@ -132,9 +136,6 @@
                <title/>
                <genre/>
                <textProvenance/>
-               <langUsage>
-                  <language ident="fr-FR">Français</language>
-               </langUsage>
                <origLanguage>
                   <language ident=""/>
                </origLanguage>
