@@ -142,7 +142,7 @@
             	<experienceType ref="#"/>
         	<posture type="#"></posture>
             	<lighting type ="#"></lighting>
-            	<location type="#"></location>
+            	<environment type="#"></location>
             	<intensity type="#"></intensity>
             	<emotion type="#OCC/happy-for"></emotion>
             	<testimony type"direct|undirect|unknown"></testimony>
