@@ -15,12 +15,6 @@
                </persName>
             </author>
          </titleStmt>
-         <publicationStmt>
-            <!-- Dans <availability> faire apparaître toutes les informations relatives à la disponibilité du texte (censuré, partiellement censuré ...)  -->
-            <publisher></publisher>
-            <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
-            <date when="2005">2005</date>
-         </publicationStmt>
          <sourceDesc>
             <!-- Dans le cas d'un témoignage provenant d'un manuscrit non publié, msItem non répété car les infos titre/auteur sont déjà prises en compte dans titleStmt -->
             <msDesc>
@@ -50,6 +44,7 @@
                      <pubPlace>Marseille</pubPlace>
                      <date when="2005">2005</date>
                   </imprint>
+                    <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
                   <biblScope></biblScope>
                </monogr>
                <!-- Dans le cas d'une publication en ligne -->
