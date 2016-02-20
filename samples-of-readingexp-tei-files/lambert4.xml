@@ -126,7 +126,8 @@
                   <persName>
                      <forename/>
                      <surname/>
-                  </persName> 
+                  </persName>
+                   <persName type ="pseudo"/>
                </author>
                <title/>
                <genre/>
