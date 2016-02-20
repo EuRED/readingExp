@@ -12,11 +12,12 @@
                <persName>
                   <forename>Jean</forename>
                   <surname>Lambert</surname>
+                  <roleName/>
                </persName>
+               <persName type="pseudo"/>
             </author>
          </titleStmt>
          <sourceDesc>
-            <!-- Dans le cas d'un témoignage provenant d'un manuscrit non publié, msItem non répété car les infos titre/auteur sont déjà prises en compte dans titleStmt -->
             <msDesc>
                <msIdentifier>
                	  <country></country>
@@ -27,16 +28,15 @@
                   <idno></idno>
                </msIdentifier>
             </msDesc>
-            <!-- Dans le cas d'un témoignage provenant d'un imprimé (monographie)-->
             <biblStruct>
                <monogr>
-                  <!-- Nécessité de répéter les champs <author> et <title> -->
                   <author>
                      <persName>
                         <forename>Jean</forename>
                         <surname>Lambert</surname>
                         <roleName></roleName>
                      </persName>
+                     <persName type ="pseudo"/>
                   </author>
                   <title>Journal (septembre 1940-septembre 1942)</title>
                   <imprint>
@@ -47,9 +47,7 @@
                     <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
                   <biblScope></biblScope>
                </monogr>
-               <!-- Dans le cas d'une publication en ligne -->
             </biblStruct>
-            <!-- Dans tous les cas, dans le cas d'une correspondance, identifier le scripteur et le destinataire -->
          </sourceDesc>
       </fileDesc>
       <profileDesc>
