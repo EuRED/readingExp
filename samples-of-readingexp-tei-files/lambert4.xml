@@ -65,7 +65,9 @@
                </persName>
             </correspAction>
          </correspDesc>
-         <langUsage ident="#"></langUsage>
+         <langUsage>
+         	<language ident="#"/>
+         </langUsage>
       </profileDesc>
       <readingExpDesc>
       	<readingExpRef ref="#"></readingExpRef>
