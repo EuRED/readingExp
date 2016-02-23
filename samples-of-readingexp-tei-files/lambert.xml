@@ -149,10 +149,10 @@
             	<experienceType ref="#"/>
         	<posture type="#"></posture>
             	<lighting type ="#"></lighting>
-            	<environment type="#"></location>
+            	<environment type="#"></environment>
             	<intensity type="#"></intensity>
             	<emotion type="#OCC/happy-for"></emotion>
-            	<testimony type"direct|undirect|unknown"></testimony>
+            	<testimony type="direct|undirect|unknown"></testimony>
             	<expFrequency type="#"></expFrequency>
             	<sourceRelialabiblity ref=""></sourceRelialabiblity>
             	<note></note>
