@@ -20,7 +20,7 @@
          <sourceDesc>
             <msDesc>
                <msIdentifier>
-               	  <country></country>
+               	<country></country>
                   <settlement></settlement>
                   <institution></institution>
                   <repository></repository>
@@ -95,6 +95,7 @@
                </persName>
                <sex>M</sex>
                <birth>1914-12-31</birth>
+               <age type="indicated|calculated"/>
                <death/>
                <occupation/>
                <country/>
@@ -111,6 +112,7 @@
                </persName>
                <sex />
                <birth />
+               <age/>
                <death/>
                <occupation />
                <country />
@@ -147,7 +149,7 @@
             </textread>
             <readingExp>
             	<experienceType ref="#"/>
-        	<posture type="#"></posture>
+            	<posture type="#"></posture>
             	<lighting type ="#"></lighting>
             	<environment type="#"></environment>
             	<intensity type="#"></intensity>
