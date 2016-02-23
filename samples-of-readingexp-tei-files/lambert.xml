@@ -74,16 +74,16 @@
          </langUsage>
       </profileDesc>
       <readingExpDesc>
-	<respStmt>
-		<resp>Edited by</resp>
-			<persName>
-				<forename>François</forename>
-				<surname>Vignale</surname>
-			</persName>
-			<address>
-				<addressline/>
-			</address>
-	</respStmt>
+         <respStmt>
+				<resp>Edited by</resp>
+               <persName>
+                  <forename>François</forename>
+                  <surname>Vignale</surname>
+               </persName>
+               <address>
+                  <addressline/>
+               </address>
+         </respStmt>
       	<readingExpRef ref="#eured/c01-2015100573321">
             <date when="1941-04-22"/>
             <time/>
