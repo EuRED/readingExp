@@ -74,7 +74,7 @@
          </langUsage>
       </profileDesc>
       <readingExpDesc>
-      	<readingExpRef ref="#"></readingExpRef>
+      	<readingExpRef ref="#">
       	    <respStmt>
                <resp>Edited by</resp>
                <persName>
@@ -157,6 +157,7 @@
             	<sourceRelialabiblity ref=""></sourceRelialabiblity>
             	<note></note>
             </readingExp>
+         </readingExpRef>
       </readingExpDesc>
    </teiHeader>
    <text>
