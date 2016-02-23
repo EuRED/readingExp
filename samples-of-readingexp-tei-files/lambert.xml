@@ -73,7 +73,7 @@
          	<language ident="#"/>
          </langUsage>
       </profileDesc>
-      <readingExpDesc>
+      <experienceDesc>
          <respStmt>
 				<resp>Edited by</resp>
                <persName>
@@ -84,7 +84,7 @@
                   <addressline/>
                </address>
          </respStmt>
-      	<readingExpRef ref="#eured/c01-2015100573321">
+      	<experience ref="#eured/c01-2015100573321">
             <date when="1941-04-22"/>
             <time/>
             <reader>
@@ -145,7 +145,7 @@
                <textform type="#"/>
                <textStatus type="#"></textStatus>
             </textread>
-            <experience>
+            <readingExp>
             	<experienceType ref="#"/>
         	<posture type="#"></posture>
             	<lighting type ="#"></lighting>
@@ -156,9 +156,9 @@
             	<expFrequency type="#"></expFrequency>
             	<sourceRelialabiblity ref=""></sourceRelialabiblity>
             	<note></note>
-            </experience>
-         </readingExpRef>
-      </readingExpDesc>
+            </readingExp>
+         </experience>
+      </experienceDesc>
    </teiHeader>
    <text>
       <body>
@@ -166,12 +166,12 @@
             plans pour aller chaque midi aux Catalans. </p>
          <p>J'achevais de lire Orlando, voilà deux semaines, quand j'ai appris la mort de 
             Virginia Woolf. 
-            <readingExp ref="#eured/c01-2015100573321">Je lis maintenant Années, qui me
+            <experienceRef id="#eured/c01-2015100573321">Je lis maintenant Années, qui me
                rappelle, en plus léger, Les Buddenbrooks, et où certaines descriptions de la campagne
-               m'émeuvent comme celles d'Anna Karénine</readingExp>; mais 
-            <readingExp ref="#eured/test2">c'est aux Vagues que je continue à penser
+               m'émeuvent comme celles d'Anna Karénine</experienceRef>; mais 
+            <experienceRef id="#eured/test2">c'est aux Vagues que je continue à penser
                avec un attachement à demi nostalgique (je les lisais à Berlin).
-            </readingExp></p>
+            </experienceRef></p>
       </body>
    </text>
 </TEI>
