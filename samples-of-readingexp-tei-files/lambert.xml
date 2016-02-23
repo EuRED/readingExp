@@ -27,6 +27,7 @@
                   <collection></collection>
                   <idno></idno>
                </msIdentifier>
+               <additional/>
             </msDesc>
             <biblStruct>
                <monogr>
@@ -47,6 +48,9 @@
                     <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
                   <biblScope></biblScope>
                </monogr>
+               <noteStmt>
+               	<note/>
+               </noteStmt>
             </biblStruct>
          </sourceDesc>
       </fileDesc>
@@ -77,6 +81,9 @@
                   <forename>François</forename>
                   <surname>Vignale</surname>
                </persName>
+               <address>
+               	<addressline/>
+               </address>
             </respStmt>
             <date when="1941-04-22"/>
             <time/>
