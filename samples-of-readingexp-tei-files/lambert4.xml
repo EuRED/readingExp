@@ -12,34 +12,31 @@
                <persName>
                   <forename>Jean</forename>
                   <surname>Lambert</surname>
+                  <roleName/>
                </persName>
+               <persName type="pseudo"/>
             </author>
          </titleStmt>
-         <publicationStmt>
-            <!-- Dans <availability> faire apparaître toutes les informations relatives à la disponibilité du texte (censuré, partiellement censuré ...)  -->
-            <publisher></publisher>
-            <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
-            <date when="2005">2005</date>
-         </publicationStmt>
          <sourceDesc>
-            <!-- Dans le cas d'un témoignage provenant d'un manuscrit non publié, msItem non répété car les infos titre/auteur sont déjà prises en compte dans titleStmt -->
             <msDesc>
                <msIdentifier>
+               	  <country></country>
                   <settlement></settlement>
+                  <institution></institution>
                   <repository></repository>
+                  <collection></collection>
                   <idno></idno>
                </msIdentifier>
             </msDesc>
-            <!-- Dans le cas d'un témoignage provenant d'un imprimé (monographie)-->
             <biblStruct>
                <monogr>
-                  <!-- Nécessité de répéter les champs <author> et <title> -->
                   <author>
                      <persName>
                         <forename>Jean</forename>
                         <surname>Lambert</surname>
                         <roleName></roleName>
                      </persName>
+                     <persName type ="pseudo"/>
                   </author>
                   <title>Journal (septembre 1940-septembre 1942)</title>
                   <imprint>
@@ -47,11 +44,10 @@
                      <pubPlace>Marseille</pubPlace>
                      <date when="2005">2005</date>
                   </imprint>
+                    <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
                   <biblScope></biblScope>
                </monogr>
-               <!-- Dans le cas d'une publication en ligne -->
             </biblStruct>
-            <!-- Dans tous les cas, dans le cas d'une correspondance, identifier le scripteur et le destinataire -->
          </sourceDesc>
       </fileDesc>
       <profileDesc>
@@ -69,6 +65,9 @@
                </persName>
             </correspAction>
          </correspDesc>
+         <langUsage>
+         	<language ident="#"/>
+         </langUsage>
       </profileDesc>
       <readingExpDesc>
       	<readingExpRef ref="#"></readingExpRef>
@@ -127,14 +126,12 @@
                   <persName>
                      <forename/>
                      <surname/>
-                  </persName> 
+                  </persName>
+                   <persName type ="pseudo"/>
                </author>
                <title/>
                <genre/>
                <textProvenance/>
-               <langUsage>
-                  <language ident="fr-FR">Français</language>
-               </langUsage>
                <origLanguage>
                   <language ident=""/>
                </origLanguage>
@@ -145,7 +142,7 @@
             	<experienceType ref="#"/>
         	<posture type="#"></posture>
             	<lighting type ="#"></lighting>
-            	<location type="#"></location>
+            	<environment type="#"></location>
             	<intensity type="#"></intensity>
             	<emotion type="#OCC/happy-for"></emotion>
             	<testimony type"direct|undirect|unknown"></testimony>
