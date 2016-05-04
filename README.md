@@ -9,5 +9,7 @@ It contains different branches :
 
 ## Thesaurus
 
+![CC-BY-NC](https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Cc-by-nc_icon.svg/176px-Cc-by-nc_icon.svg.png)
+
 The EuRED thesaurus are released under CC-BY-NC licence.
 More information here : https://en.wikipedia.org/wiki/Creative_Commons_license
