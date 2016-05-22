@@ -1,6 +1,6 @@
 
 <!--
-DTD generated from ODD source 2016-05-22T18:00:36Z. .TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
+DTD generated from ODD source 2016-05-22T18:48:17Z. .TEI material can be licensed differently depending on the use you intend to make of it. Hence it is made available under both the CC+BY and BSD-2 licences. The CC+BY licence is generally appropriate for usages which treat TEI content as data or documentation. The BSD-2 licence is generally appropriate for usage of TEI content in a software environment. For further information or clarification, please contact the TEI Consortium (info@tei-c.org).
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2746,7 +2746,7 @@ key CDATA  #REQUIRED >
 <!ATTLIST experienceFreq xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
 <!ATTLIST experienceFreq
  %att.global.attributes;
-type (single event|serial event|unknown) "unknown"  >
+type (single_event|serial_event|unknown) "unknown"  >
 <!--doc: -->
 <!ELEMENT experienceRef  EMPTY>
 <!ATTLIST experienceRef xmlns CDATA "http://readingexp.univ-lemans.fr/tei">
