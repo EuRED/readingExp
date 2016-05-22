@@ -12,22 +12,21 @@
                <persName>
                   <forename>Jean</forename>
                   <surname>Lambert</surname>
-                  <roleName/>
                </persName>
-               <persName type="pseudo"/>
+               <persName type="pseudo"></persName>
             </author>
          </titleStmt>
          <sourceDesc>
             <msDesc>
                <msIdentifier>
-               	<country></country>
+                  <country></country>
                   <settlement></settlement>
                   <institution></institution>
                   <repository></repository>
                   <collection></collection>
                   <idno></idno>
                </msIdentifier>
-               <additional/>
+               <additional></additional>
             </msDesc>
             <biblStruct>
                <monogr>
@@ -37,7 +36,7 @@
                         <surname>Lambert</surname>
                         <roleName></roleName>
                      </persName>
-                     <persName type ="pseudo"/>
+                     <persName type="pseudo"></persName>
                   </author>
                   <title>Journal (septembre 1940-septembre 1942)</title>
                   <imprint>
@@ -45,11 +44,11 @@
                      <pubPlace>Marseille</pubPlace>
                      <date when="2005">2005</date>
                   </imprint>
-                    <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
+                  <availability status="free"><p>Disponible à l'adresse <ref target="http://publications.univ-provence.fr/ddb/document.php?id=98"></ref></p></availability>
                   <biblScope></biblScope>
                </monogr>
                <noteStmt>
-               	<note/>
+                  <note/>
                </noteStmt>
             </biblStruct>
          </sourceDesc>
@@ -70,21 +69,21 @@
             </correspAction>
          </correspDesc>
          <langUsage>
-         	<language ident="#"/>
+            <language ident="fr-FR">Français</language>
          </langUsage>
       </profileDesc>
       <experienceDesc>
-         <respStmt>
-				<resp>Edited by</resp>
+         <experience ref="#">
+            <respStmt>
+               <resp>Edited by</resp>
                <persName>
                   <forename>François</forename>
                   <surname>Vignale</surname>
                </persName>
                <address>
-                  <addressline/>
+                  <addressline></addressline>
                </address>
-         </respStmt>
-      	<experience ref="#eured/c01-2015100573321">
+            </respStmt>
             <date when="1941-04-22"/>
             <time/>
             <reader>
@@ -95,14 +94,13 @@
                </persName>
                <sex>M</sex>
                <birth>1914-12-31</birth>
-               <age type="indicated|calculated"/>
-               <death/>
-               <occupation/>
-               <country/>
-               <education/>
-               <faith/>
+               <age/>
+               <occupation scheme="http://eured.univ-lemans.fr/ontologies/occupation"></occupation>
+               <country></country>
+               <education scheme="http://eured.univ-lemans.fr/ontologies/education"></education>
+               <faith scheme="http://eured.univ-lemans.fr/ontologies/faith"></faith>
                <nationality/>
-               <readerStatus ref="#professional">professional</readerStatus>
+               <readerStatus scheme="http://eured.univ-lemans.fr/ontologies/reader_status">professional</readerStatus>
             </reader>
             <listener>
                <persName>
@@ -113,13 +111,12 @@
                <sex />
                <birth />
                <age/>
-               <death/>
-               <occupation />
+               <occupation scheme="http://eured.univ-lemans.fr/ontologies/occupation"></occupation>
                <country />
-               <education />
-               <faith />
+               <education scheme="http://eured.univ-lemans.fr/ontologies/education"></education>
+               <faith scheme="http://eured.univ-lemans.fr/ontologies/faith"></faith>
                <nationality />
-               <listenerStatus />
+               <listenerStatus scheme="http://eured.univ-lemans.fr/ontologies/listener_status"></listenerStatus>
             </listener>
             <place>
                <placeName/>
@@ -130,36 +127,36 @@
                   <district/>
                </location>
             </place>     
-            <textread>
+            <textRead>
                <author>
                   <persName>
                      <forename/>
                      <surname/>
                   </persName>
-                   <persName type ="pseudo"/>
+                  <persName type="pseudo"></persName>
                </author>
                <title/>
-               <genre/>
-               <textProvenance/>
+               <genre scheme="http://eured.univ-lemans.fr/ontologies/genre"></genre>
+               <textProvenance scheme="http://eured.univ-lemans.fr/ontologies/text_provenance"></textProvenance>          
                <origLanguage>
                   <language ident=""/>
                </origLanguage>
-               <textform type="#"/>
-               <textStatus type="#"></textStatus>
-            </textread>
+               <textForm scheme="http://eured.univ-lemans.fr/ontologies/text_form"></textForm>
+               <textStatus scheme="http://eured.univ-lemans.fr/ontologies/text_status"></textStatus>
+            </textRead>
             <readingExp>
-            	<experienceType ref="#"/>
-            	<posture type="#"></posture>
-            	<lighting type ="#"></lighting>
-            	<environment type="#"></environment>
-            	<intensity type="#"></intensity>
-            	<emotion type="#OCC/happy-for"></emotion>
-            	<testimony type="direct|undirect|unknown"></testimony>
-            	<expFrequency type="#"></expFrequency>
-            	<sourceRelialabiblity ref=""></sourceRelialabiblity>
-            	<note></note>
+               <experienceType scheme="http://eured.univ-lemans.fr/ontologies/experience_type"></experienceType>
+               <posture scheme="http://eured.univ-lemans.fr/ontologies/posture"></posture>
+               <lighting scheme ="http://eured.univ-lemans.fr/ontologies/lighting"></lighting>
+               <environment scheme="http://eured.univ-lemans.fr/ontologies/environment"></environment>
+               <intensity scheme="http://eured.univ-lemans.fr/ontologies/intensity"></intensity>
+               <emotion scheme="http://eured.univ-lemans.fr/ontologies/emotion"></emotion>
+               <testimony scheme="http://eured.univ-lemans.fr/ontologies/testimony"></testimony>
+               <sourceRelialabiblity scheme="http://eured.univ-lemans.fr/ontologies/source_reliability"></sourceRelialabiblity>
+               <expFrequency scheme="http://eured.univ-lemans.fr/ontologies/experience_frequency"></expFrequency>
+               <note></note>
             </readingExp>
-         </experience>
+           </experience>
       </experienceDesc>
    </teiHeader>
    <text>
@@ -167,11 +164,10 @@
          <p>22 avril. Jours d'été. Je ne tarderai guère à prendre mon premier bain, tire déjà des
             plans pour aller chaque midi aux Catalans. </p>
          <p>J'achevais de lire Orlando, voilà deux semaines, quand j'ai appris la mort de 
-            Virginia Woolf. 
-            <experienceRef id="#eured/c01-2015100573321">Je lis maintenant Années, qui me
+            Virginia Woolf. <experienceRef ref="#eured/c01-2015100573321">Je lis maintenant Années, qui me
                rappelle, en plus léger, Les Buddenbrooks, et où certaines descriptions de la campagne
                m'émeuvent comme celles d'Anna Karénine</experienceRef>; mais 
-            <experienceRef id="#eured/test2">c'est aux Vagues que je continue à penser
+            <experienceRef ref="#eured/test2">c'est aux Vagues que je continue à penser
                avec un attachement à demi nostalgique (je les lisais à Berlin).
             </experienceRef></p>
       </body>
