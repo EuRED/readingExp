@@ -68,7 +68,7 @@
 				<elementSpec ident="readingExp" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc>Contains all the description of the reading experience elements.</desc>
 					<attList>
-						<attDef ident="ref" mode="add">
+						<attDef ident="ref" mode="delete">
 							<desc>Reference</desc>
 							<datatype minOccurs="0" maxOccurs="1">
 								<rng:ref name="data.text"/>
@@ -81,41 +81,38 @@
 					<content>
 						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
 							<rng:zeroOrMore>
-								<rng:ref name="respStmt"/>
-							</rng:zeroOrMore>
-							<rng:zeroOrMore>
-								<rng:ref name="date"/>
-							</rng:zeroOrMore>
-							<rng:zeroOrMore>
-								<rng:ref name="reader"/>
-							</rng:zeroOrMore>
-							<rng:zeroOrMore>
-								<rng:ref name="listener"/>
-							</rng:zeroOrMore>
-							<rng:zeroOrMore>
-								<rng:ref name="place"/>
-							</rng:zeroOrMore>
-							<rng:zeroOrMore>
-								<rng:ref name="langUsage"/>
-							</rng:zeroOrMore>
-							<rng:zeroOrMore>
-								<rng:ref name="textread"/>
-							</rng:zeroOrMore>
-							<rng:zeroOrMore>
 								<rng:ref name="experienceType"/>
 							</rng:zeroOrMore>
 							<rng:zeroOrMore>
 								<rng:ref name="note"/>
 							</rng:zeroOrMore>
 							<rng:zeroOrMore>
-								<rng:ref name="title"/>
+								<rng:ref name="emotion"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="testimony"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="posture"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="intensity"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="lighting"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="environment"/>
 							</rng:zeroOrMore>
 							<rng:zeroOrMore>
 								<rng:ref name="emotion"/>
 							</rng:zeroOrMore>
-							<rng:optional>
-								<rng:ref name="testimony"/>
-							</rng:optional>
+							<rng:zeroOrMore>
+								<rng:ref name="expFrequency"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="sourceReliability"/>
+							</rng:zeroOrMore>
 						</rng:group>
 					</content>
 				</elementSpec>
@@ -173,20 +170,30 @@
 							<rng:zeroOrMore>
 								<rng:ref name="readerStatus"/>
 							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="age"/>
+							</rng:zeroOrMore>
 						</rng:group>
 					</content>
 				</elementSpec>
 				<elementSpec ident="readerStatus" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc>Contains information on the degree of professionalism of the reader in his reading activities.</desc>
 					<attList>
-						<attDef ident="ref" mode="add">
+						<attDef ident="ref" mode="delete">
 							<desc>Reference</desc>
 							<datatype minOccurs="0" maxOccurs="1">
 								<rng:ref name="data.text"/>
 							</datatype>
 						</attDef>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
 					</attList>
 					<classes>
+						<memberOf key="model.pLike"/>
 						<memberOf key="att.global"/>
 						<memberOf key="att.global.analytic"/>
 						<memberOf key="att.global.change"/>
@@ -195,20 +202,7 @@
 						<memberOf key="att.global.rendition"/>
 						<memberOf key="att.global.responsibility"/>
 					</classes>
-					<content>
-						<zeroOrMore>
-							<choice>
-								<attribute>
-									<anyName/>
-								</attribute>
-								<text/>
-								<element>
-									<anyName/>
-									<ref name="readerStatus"/>
-								</element>
-							</choice>
-						</zeroOrMore>
-					</content>
+					<content/>
 				</elementSpec>
 				<elementSpec ident="listener" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc>Contains all the information on the listener.</desc>
@@ -237,6 +231,7 @@
 						<memberOf key="att.global.linking"/>
 						<memberOf key="att.global.rendition"/>
 						<memberOf key="att.global.responsibility"/>
+						<memberOf key="att.naming"/>
 						<memberOf key="att.personal"/>
 						<memberOf key="att.ranging"/>
 						<memberOf key="att.source"/>
@@ -281,8 +276,16 @@
 					</classes>
 					<content>
 					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+					</attList>
 				</elementSpec>
-				<elementSpec ident="textread" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+				<elementSpec ident="textRead" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc>Contains information on the text read during the reading experience.</desc>
 					<attList>
 						<attDef ident="ref" mode="add">
@@ -298,6 +301,8 @@
 						<memberOf key="att.canonical"/>
 						<memberOf key="att.datable"/>
 						<memberOf key="att.datable.custom"/>
+						<memberOf key="att.datable.iso"/>
+						<memberOf key="att.datable.w3c"/>
 						<memberOf key="att.dimensions"/>
 						<memberOf key="att.editLike"/>
 						<memberOf key="att.global"/>
@@ -325,16 +330,16 @@
 								<rng:ref name="genre"/>
 							</rng:zeroOrMore>
 							<rng:zeroOrMore>
-								<rng:ref name="provenance"/>
+								<rng:ref name="textProvenance"/>
 							</rng:zeroOrMore>
 							<rng:zeroOrMore>
-								<rng:ref name="langUsage"/>
+								<rng:ref name="textForm"/>
+							</rng:zeroOrMore>
+							<rng:zeroOrMore>
+								<rng:ref name="textStatus"/>
 							</rng:zeroOrMore>
 							<rng:zeroOrMore>
 								<rng:ref name="origLanguage"/>
-							</rng:zeroOrMore>
-							<rng:zeroOrMore>
-								<rng:ref name="objectType"/>
 							</rng:zeroOrMore>
 						</rng:group>
 					</content>
@@ -346,15 +351,29 @@
 					</classes>
 					<content>
 					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+					</attList>
 				</elementSpec>
 				<elementSpec ident="origLanguage" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc>Contains information on the original language of the text read during the reading experience.&#13;
 					</desc>
 					<attList>
-						<attDef ident="ref" mode="add">
+						<attDef ident="ref" mode="delete">
 							<desc>Reference</desc>
 							<datatype minOccurs="0" maxOccurs="1">
 								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+						<attDef ident="ident" mode="add" usage="req">
+							<desc>ident</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.name"/>
 							</datatype>
 						</attDef>
 					</attList>
@@ -373,7 +392,7 @@
 				<elementSpec ident="experienceType" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc>Contains information about the type of reading experience</desc>
 					<attList>
-						<attDef ident="type" mode="change">
+						<attDef ident="type" mode="delete">
 							<desc>Type of experience</desc>
 							<datatype minOccurs="0" maxOccurs="1">
 								<rng:ref name="data.text"/>
@@ -391,6 +410,12 @@
 								<valItem ident="unknown"/>
 							</valList>
 						</attDef>
+						<attDef ident="scheme" mode="add">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
 					</attList>
 					<classes>
 						<memberOf key="att.global"/>
@@ -401,36 +426,29 @@
 				<elementSpec ident="emotion" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc>Contains information regarding the emotions generated by the reading experience.</desc>
 					<attList>
-						<attDef ident="ref" mode="add">
+						<attDef ident="ref" mode="delete">
 							<desc>Reference</desc>
 							<datatype minOccurs="0" maxOccurs="1">
 								<rng:ref name="data.text"/>
 							</datatype>
 						</attDef>
-						<attDef ident="type" mode="add">
+						<attDef ident="type" mode="delete">
 							<desc>Type</desc>
 							<datatype minOccurs="0" maxOccurs="1">
 								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
 							</datatype>
 						</attDef>
 					</attList>
 					<classes>
 						<memberOf key="att.global"/>
 					</classes>
-					<content>
-						<zeroOrMore>
-							<choice>
-								<attribute>
-									<anyName/>
-								</attribute>
-								<text/>
-								<element>
-									<anyName/>
-									<ref name="emotion"/>
-								</element>
-							</choice>
-						</zeroOrMore>
-					</content>
+					<content/>
 				</elementSpec>
 				<elementSpec ident="readingExpDesc" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc/>
@@ -444,24 +462,6 @@
 								<rng:ref name="readingExp"/>
 							</rng:zeroOrMore>
 						</rng:group>
-					</content>
-				</elementSpec>
-				<elementSpec ident="readingExpRef" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
-					<desc/>
-					<attList>
-						<attDef ident="ref" mode="add">
-							<desc>Reference</desc>
-							<datatype minOccurs="0" maxOccurs="1">
-								<rng:ref name="data.text"/>
-							</datatype>
-						</attDef>
-					</attList>
-					<classes>
-						<memberOf key="model.pPart.data"/>
-						<memberOf key="att.global"/>
-					</classes>
-					<content>
-						<rng:ref name="macro.paraContent"/>
 					</content>
 				</elementSpec>
 				<elementSpec ident="correspDesc" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
@@ -551,6 +551,14 @@
 					<classes/>
 					<content>
 					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+					</attList>
 				</elementSpec>
 				<elementSpec ident="testimony" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
 					<desc>Direct or indirect testimony</desc>
@@ -570,6 +578,12 @@
 								<valItem ident="not set"/>
 							</valList>
 						</attDef>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
 					</attList>
 				</elementSpec>
 				<elementSpec ident="experienceFreq" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
@@ -588,6 +602,230 @@
 								<valItem ident="serial event"/>
 								<valItem ident="unknown"/>
 							</valList>
+						</attDef>
+					</attList>
+				</elementSpec>
+				<elementSpec ident="experienceDescPart" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc>groups elements which may be used inside &lt;experienceDesc&gt; and may appear multiple times.</desc>
+					<classes>
+						<memberOf key="model.teiHeaderPart"/>
+					</classes>
+					<content>
+						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+							<rng:OneOrMore>
+								<rng:ref name="experience"/>
+							</rng:OneOrMore>
+						</rng:group>
+					</content>
+				</elementSpec>
+				<elementSpec ident="experienceDesc" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="model.teiHeaderPart"/>
+					</classes>
+					<content>
+						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+							<rng:OneOrMore>
+								<rng:ref name="experienceDescPart"/>
+							</rng:OneOrMore>
+						</rng:group>
+					</content>
+				</elementSpec>
+				<elementSpec ident="experience" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<attList>
+						<attDef ident="ref" mode="add" usage="req">
+							<desc>reference</desc>
+						</attDef>
+						<attDef ident="key" mode="add" usage="req">
+							<desc>key</desc>
+						</attDef>
+					</attList>
+					<classes>
+						<memberOf key="model.biblPart"/>
+						<memberOf key="att.canonical"/>
+						<memberOf key="att.global"/>
+						<memberOf key="att.global.analytic"/>
+						<memberOf key="att.global.change"/>
+						<memberOf key="att.global.linking"/>
+						<memberOf key="att.global.rendition"/>
+						<memberOf key="att.global.responsibility"/>
+						<memberOf key="att.source"/>
+					</classes>
+					<content>
+						<rng:group xmlns:rng="http://relaxng.org/ns/structure/1.0">
+							<rng:OneOrMore>
+								<rng:ref name="respStmt"/>
+							</rng:OneOrMore>
+							<rng:OneOrMore>
+								<rng:ref name="date"/>
+							</rng:OneOrMore>
+							<rng:OneOrMore>
+								<rng:ref name="reader"/>
+							</rng:OneOrMore>
+							<rng:OneOrMore>
+								<rng:ref name="listener"/>
+							</rng:OneOrMore>
+							<rng:OneOrMore>
+								<rng:ref name="place"/>
+							</rng:OneOrMore>
+							<rng:OneOrMore>
+								<rng:ref name="textRead"/>
+							</rng:OneOrMore>
+							<rng:OneOrMore>
+								<rng:ref name="readingExp"/>
+							</rng:OneOrMore>
+							<rng:OneOrMore>
+								<rng:ref name="time"/>
+							</rng:OneOrMore>
+						</rng:group>
+					</content>
+				</elementSpec>
+				<elementSpec ident="sourceReliability" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+					</attList>
+				</elementSpec>
+				<elementSpec ident="expFrequency" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+					</attList>
+				</elementSpec>
+				<elementSpec ident="intensity" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+					</attList>
+				</elementSpec>
+				<elementSpec ident="posture" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+					</attList>
+				</elementSpec>
+				<elementSpec ident="lighting" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+					</attList>
+				</elementSpec>
+				<elementSpec ident="textForm" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+					</attList>
+				</elementSpec>
+				<elementSpec ident="textStatus" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
+						</attDef>
+					</attList>
+				</elementSpec>
+				<elementSpec ident="experienceRef" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.canonical"/>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+					<attList>
+						<attDef ident="ref" mode="add" usage="opt">
+							<desc>ref</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.text"/>
+							</datatype>
+						</attDef>
+						<attDef ident="key" mode="add">
+							<desc>key</desc>
+						</attDef>
+					</attList>
+				</elementSpec>
+				<elementSpec ident="environment" ns="http://readingexp.univ-lemans.fr/tei" mode="add">
+					<desc/>
+					<classes>
+						<memberOf key="att.global"/>
+					</classes>
+					<content>
+					</content>
+					<attList>
+						<attDef ident="scheme" mode="add" usage="req">
+							<desc>scheme</desc>
+							<datatype minOccurs="1" maxOccurs="1">
+								<rng:ref name="data.pointer"/>
+							</datatype>
 						</attDef>
 					</attList>
 				</elementSpec>
